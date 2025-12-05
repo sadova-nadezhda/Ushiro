@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Ваш заказ оформлен" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <div class="breadcrumbs section-top section-hidden">
+        <div class="container">
+          <div class="breadcrumbs__list text-xs text-up">
+            <a href="/">
+              <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.66699 9.3737L2.00033 5.04036L6.66699 0.707031" stroke="#8E8E93" stroke-linecap="square"/>
+              </svg>
+              Back
+            </a>
+            <span>Ваш заказ оформлен</span>
+          </div>
+        </div>
+      </div>
+      <section class="page page-thanks section-hidden">
+        <div class="container">
+          <div class="page-thanks__container page__container section-pad">
+            <h1 class="page__title thanks-order__title title">Ваш заказ <strong>№21300</strong> от 01.12.2025 16:07 успешно создан</h1>
+            <div class="page__desc thanks-order__desc">Услугу предоставляет сервис онлайн платежей HalykBank</div>
+            <div class="thanks-order__price">Сумма к оплате по счету: <span>39 100 ₸</span></div>
+            <a href="/" class="page__button page-thanks__button button button-dark">Оплатить</a>
+            <div class="page__desc thanks-order__desc">Вы будете перенаправлены на страницу оплаты</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/foot.html')
+  </body>
+</html>

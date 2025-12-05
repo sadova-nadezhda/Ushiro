@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Ваши заказы" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <div class="breadcrumbs section-top section-hidden">
+        <div class="container">
+          <div class="breadcrumbs__list text-xs text-up">
+            <a href="/">
+              <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.66699 9.3737L2.00033 5.04036L6.66699 0.707031" stroke="#8E8E93" stroke-linecap="square"/>
+              </svg>
+              Back
+            </a>
+            <span>Профиль</span>
+          </div>
+        </div>
+      </div>
+      <section class="profile section-hidden">
+        <div class="container">
+          <div class="profile__container">
+            <div class="profile__left">
+              <h1 class="profile__title title">Ваши заказы</h1>
+              <div class="profile__cards"></div>
+            </div>
+            <ul class="profile__aside text-xs text-up">
+              <li><a href="profile.html">профиль</a></li>
+              <li><a href="profile-2.html" class="active">заказы</a></li>
+              <li><a href="profile-3.html">служба поддержки</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="wishlist section-hidden">
+        <div class="container">
+          <div class="wishlist__container">
+            <div class="wishlist__heading heading">
+              <div>
+                <h2 class="wishlist__title title">Your Wishlist</h2>
+              </div>
+            </div>
+            <div class="wishlist__cards catalog__cards">
+              <a class="catalog__card" href="">
+                <div class="catalog__top">
+                  <img src="@img/product-1.png" alt="">
+                  <div class="catalog__group">
+                    <div class="catalog__sale text-xs">-50%</div>
+                    <div class="catalog__favorites active">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.49316 4.89258C7.8425 4.61708 9.26045 4.9635 10.3193 5.85352L10.3311 5.86328L10.3438 5.87305C10.6809 6.13481 11.0462 6.55292 11.3828 6.96094L12 7.70898L12.6172 6.96094C13.0106 6.48397 13.2367 6.14804 13.6016 5.91211L13.6309 5.89355L13.6582 5.87305C14.7229 5.04703 16.1602 4.6903 17.5342 4.89746C19.6375 5.31557 21.2 7.23564 21.2002 9.44238C21.2002 10.5975 20.7057 11.7651 19.8594 12.5859L12.0264 20.1826C12.0184 20.1904 12.0108 20.195 12.0059 20.1992C12.0041 20.1993 12.0021 20.2002 12 20.2002C11.9975 20.2002 11.9952 20.1993 11.9932 20.1992C11.9883 20.195 11.9813 20.1901 11.9736 20.1826L4.14062 12.5859L4.13867 12.583L3.98145 12.4248C3.62651 12.0476 3.34312 11.6134 3.14258 11.1426C2.91317 10.6039 2.79601 10.0272 2.7998 9.44727V9.44238C2.79995 7.22876 4.37305 5.30353 6.48633 4.89355L6.49316 4.89258Z" stroke="#090909" stroke-width="1.6"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__bottom text-xs">
+                  <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                  <div class="catalog__price">
+                    <div class="price">₸39,100</div>
+                    <div class="old-price">₸39,100</div>
+                  </div>
+                </div>
+              </a>
+              <a class="catalog__card" href="">
+                <div class="catalog__top">
+                  <img src="@img/product-2.png" alt="">
+                  <div class="catalog__group">
+                    <div class="catalog__sale text-xs">-50%</div>
+                    <div class="catalog__favorites active">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.49316 4.89258C7.8425 4.61708 9.26045 4.9635 10.3193 5.85352L10.3311 5.86328L10.3438 5.87305C10.6809 6.13481 11.0462 6.55292 11.3828 6.96094L12 7.70898L12.6172 6.96094C13.0106 6.48397 13.2367 6.14804 13.6016 5.91211L13.6309 5.89355L13.6582 5.87305C14.7229 5.04703 16.1602 4.6903 17.5342 4.89746C19.6375 5.31557 21.2 7.23564 21.2002 9.44238C21.2002 10.5975 20.7057 11.7651 19.8594 12.5859L12.0264 20.1826C12.0184 20.1904 12.0108 20.195 12.0059 20.1992C12.0041 20.1993 12.0021 20.2002 12 20.2002C11.9975 20.2002 11.9952 20.1993 11.9932 20.1992C11.9883 20.195 11.9813 20.1901 11.9736 20.1826L4.14062 12.5859L4.13867 12.583L3.98145 12.4248C3.62651 12.0476 3.34312 11.6134 3.14258 11.1426C2.91317 10.6039 2.79601 10.0272 2.7998 9.44727V9.44238C2.79995 7.22876 4.37305 5.30353 6.48633 4.89355L6.49316 4.89258Z" stroke="#090909" stroke-width="1.6"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__bottom text-xs">
+                  <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                  <div class="catalog__price">
+                    <div class="price">₸39,100</div>
+                    <div class="old-price">₸39,100</div>
+                  </div>
+                </div>
+              </a>
+              <a class="catalog__card" href="">
+                <div class="catalog__top">
+                  <img src="@img/product-3.png" alt="">
+                  <div class="catalog__group">
+                    <div class="catalog__sale text-xs">-50%</div>
+                    <div class="catalog__favorites active">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.49316 4.89258C7.8425 4.61708 9.26045 4.9635 10.3193 5.85352L10.3311 5.86328L10.3438 5.87305C10.6809 6.13481 11.0462 6.55292 11.3828 6.96094L12 7.70898L12.6172 6.96094C13.0106 6.48397 13.2367 6.14804 13.6016 5.91211L13.6309 5.89355L13.6582 5.87305C14.7229 5.04703 16.1602 4.6903 17.5342 4.89746C19.6375 5.31557 21.2 7.23564 21.2002 9.44238C21.2002 10.5975 20.7057 11.7651 19.8594 12.5859L12.0264 20.1826C12.0184 20.1904 12.0108 20.195 12.0059 20.1992C12.0041 20.1993 12.0021 20.2002 12 20.2002C11.9975 20.2002 11.9952 20.1993 11.9932 20.1992C11.9883 20.195 11.9813 20.1901 11.9736 20.1826L4.14062 12.5859L4.13867 12.583L3.98145 12.4248C3.62651 12.0476 3.34312 11.6134 3.14258 11.1426C2.91317 10.6039 2.79601 10.0272 2.7998 9.44727V9.44238C2.79995 7.22876 4.37305 5.30353 6.48633 4.89355L6.49316 4.89258Z" stroke="#090909" stroke-width="1.6"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__bottom text-xs">
+                  <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                  <div class="catalog__price">
+                    <div class="price">₸39,100</div>
+                    <div class="old-price">₸39,100</div>
+                  </div>
+                </div>
+              </a>
+              <a class="catalog__card" href="">
+                <div class="catalog__top">
+                  <img src="@img/product-4.png" alt="">
+                  <div class="catalog__group">
+                    <div class="catalog__sale text-xs">-50%</div>
+                    <div class="catalog__favorites active">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.49316 4.89258C7.8425 4.61708 9.26045 4.9635 10.3193 5.85352L10.3311 5.86328L10.3438 5.87305C10.6809 6.13481 11.0462 6.55292 11.3828 6.96094L12 7.70898L12.6172 6.96094C13.0106 6.48397 13.2367 6.14804 13.6016 5.91211L13.6309 5.89355L13.6582 5.87305C14.7229 5.04703 16.1602 4.6903 17.5342 4.89746C19.6375 5.31557 21.2 7.23564 21.2002 9.44238C21.2002 10.5975 20.7057 11.7651 19.8594 12.5859L12.0264 20.1826C12.0184 20.1904 12.0108 20.195 12.0059 20.1992C12.0041 20.1993 12.0021 20.2002 12 20.2002C11.9975 20.2002 11.9952 20.1993 11.9932 20.1992C11.9883 20.195 11.9813 20.1901 11.9736 20.1826L4.14062 12.5859L4.13867 12.583L3.98145 12.4248C3.62651 12.0476 3.34312 11.6134 3.14258 11.1426C2.91317 10.6039 2.79601 10.0272 2.7998 9.44727V9.44238C2.79995 7.22876 4.37305 5.30353 6.48633 4.89355L6.49316 4.89258Z" stroke="#090909" stroke-width="1.6"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__bottom text-xs">
+                  <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                  <div class="catalog__price">
+                    <div class="price">₸39,100</div>
+                    <div class="old-price">₸39,100</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq section-pad-bottom section-hidden">
+        <div class="container">
+          <div class="faq__container">
+            <div class="faq__heading heading">
+              <div>
+                <h2 class="faq__title title text-up">FAQ</h2>
+              </div>
+            </div>
+            <div class="faq__accordion accordion">
+              <div class="accordion__item">
+                <div class="accordion__head">
+                  <div class="accordion__caption title-s">Как выбрать размер?</div>
+                  <div class="accordion__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__content color-grey"><p>Бонусы за покупки и рекомендации. Постоянным клиентам — ранний доступ к дропам и закрытым сейлам.</p></div>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__head">
+                  <div class="accordion__caption title-s">Доставка по Казахстану</div>
+                  <div class="accordion__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__content color-grey"><p>Бонусы за покупки и рекомендации. Постоянным клиентам — ранний доступ к дропам и закрытым сейлам.</p></div>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__head">
+                  <div class="accordion__caption title-s">Можно ли с примеркой?</div>
+                  <div class="accordion__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__content color-grey"><p>Бонусы за покупки и рекомендации. Постоянным клиентам — ранний доступ к дропам и закрытым сейлам.</p></div>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__head">
+                  <div class="accordion__caption title-s">Будут ли рестоки?</div>
+                  <div class="accordion__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__content color-grey"><p>Бонусы за покупки и рекомендации. Постоянным клиентам — ранний доступ к дропам и закрытым сейлам.</p></div>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__head">
+                  <div class="accordion__caption title-s">Программа лояльности</div>
+                  <div class="accordion__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__content color-grey">
+                    <p>Бонусы за покупки и рекомендации. Постоянным клиентам — ранний доступ к дропам и закрытым сейлам.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

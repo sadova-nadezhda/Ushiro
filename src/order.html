@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Оформление заказа" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <div class="breadcrumbs section-top section-hidden">
+        <div class="container">
+          <div class="breadcrumbs__list text-xs text-up">
+            <a href="/">
+              <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.66699 9.3737L2.00033 5.04036L6.66699 0.707031" stroke="#8E8E93" stroke-linecap="square"/>
+              </svg>
+              Back
+            </a>
+            <span>Оформление заказа</span>
+          </div>
+        </div>
+      </div>
+      <section class="order section-hidden">
+        <div class="container">
+          <div class="order__container"></div>
+            <form class="order__form form">
+              <div class="order__left">
+                <h1 class="order__title title">Оформление заказа</h1>
+                <div class="order__group">
+                  <div class="form__field">
+                    <select name="" required>
+                      <option value="" selected>Страна</option>
+                      <option value="">Страна 1</option>
+                      <option value="">Страна 2</option>
+                      <option value="">Страна 3</option>
+                    </select>
+                    <span class="form-error text-xs"></span>
+                  </div>
+                  <div class="form__field">
+                    <input type="text" name="first-name" data-placeholder="Имя" required>
+                    <span class="form-error text-xs">Введите имя</span>
+                  </div>
+                  <div class="form__field">
+                    <select name="" required>
+                      <option value="" selected>Город</option>
+                      <option value="">Город 1</option>
+                      <option value="">Город 2</option>
+                      <option value="">Город 3</option>
+                    </select>
+                    <span class="form-error text-xs"></span>
+                  </div>
+                  <div class="form__field">
+                    <input type="text" name="last-name" data-placeholder="Фамилия" required>
+                    <span class="form-error text-xs"></span>
+                  </div>
+                  <div class="form__field">
+                    <input type="text" name="address" data-placeholder="Адрес" required>
+                    <span class="form-error text-xs"></span>
+                  </div>
+                  <div class="form__field">
+                    <input type="tel" name="phone" data-placeholder="Номер телефона" required>
+                    <span class="form-error text-xs"></span>
+                  </div>
+                  <div class="form__field">
+                    <input type="text" name="code" data-placeholder="Почтовый индекс" required>
+                    <span class="form-error text-xs"></span>
+                  </div>
+                  <div class="form__field">
+                    <input type="email" name="email" data-placeholder="Email address" required>
+                    <span class="form-error text-xs"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="order__right">
+                <h2 class="order__title title">Summary</h2>
+                <div class="bag__summary text-xs text-space text-up">
+                  <div class="bag__item">
+                    <span>Subtotal</span>
+                    <div>₸39,100</div>
+                  </div>
+                  <div class="bag__item">
+                    <span>Subtotal</span>
+                    <div>₸39,100</div>
+                  </div>
+                  <div class="bag__item">
+                    <span>Estimated Shipping & Handling</span>
+                    <div>Free</div>
+                  </div>
+                </div>
+                <div class="bag__total ">
+                  <div>Total</div>
+                  <div>₸39,100</div>
+                </div>
+                <div class="bag__buttons">
+                  <button type="submit" class="bag__button button button-dark">Перейти к оплате</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

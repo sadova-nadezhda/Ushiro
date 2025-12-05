@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Профиль" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <div class="breadcrumbs section-top section-hidden">
+        <div class="container">
+          <div class="breadcrumbs__list text-xs text-up">
+            <a href="/">
+              <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.66699 9.3737L2.00033 5.04036L6.66699 0.707031" stroke="#8E8E93" stroke-linecap="square"/>
+              </svg>
+              Back
+            </a>
+            <span>Профиль</span>
+          </div>
+        </div>
+      </div>
+      <section class="profile section-hidden">
+        <div class="container">
+          <div class="profile__container">
+            <div class="profile__left">
+              <h1 class="profile__title title">Ваш профиль</h1>
+              <div class="profile__form form">
+                <form id="profileForm" class="profile-form">
+                  <div class="form__fieldset">
+                    <div class="form__field">
+                      <input type="text" name="first-name" data-placeholder="Имя" value="Торегали" required>
+                      <span class="form-error text-xs">Введите имя</span>
+                    </div>
+                    <div class="form__field">
+                      <input type="tel" name="phone" data-placeholder="Номер телефона" value="+ 7 777 777 7777" required>
+                      <span class="form-error text-xs"></span>
+                    </div>
+                    <div class="form__field">
+                      <input type="text" name="last-name" data-placeholder="Фамилия" value="Торегали" required>
+                      <span class="form-error text-xs"></span>
+                    </div>
+                    <div class="form__field">
+                      <input type="text" name="address" data-placeholder="Адрес" value="Baspen@inbox.com" required>
+                      <span class="form-error text-xs"></span>
+                    </div>
+                    <div class="form__field">
+                      <input type="password" name="password" data-placeholder="Password" value="123456" required>
+                      <span class="form-error text-xs"></span>
+                    </div>
+                  </div>
+                  <button class="form__button button button-dark" disabled>Сохранить</button>
+                </form>
+              </div>
+            </div>
+            <ul class="profile__aside text-xs text-up">
+              <li><a href="profile.html" class="active">профиль</a></li>
+              <li><a href="profile-2.html">заказы</a></li>
+              <li><a href="profile-3.html">служба поддержки</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="faq section-pad-bottom section-hidden">
+        <div class="container">
+          <div class="faq__container">
+            <div class="faq__heading heading">
+              <div>
+                <h2 class="faq__title title text-up">FAQ</h2>
+              </div>
+            </div>
+            <div class="faq__accordion accordion">
+              <div class="accordion__item">
+                <div class="accordion__head">
+                  <div class="accordion__caption title-s">Как выбрать размер?</div>
+                  <div class="accordion__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__content color-grey"><p>Бонусы за покупки и рекомендации. Постоянным клиентам — ранний доступ к дропам и закрытым сейлам.</p></div>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__head">
+                  <div class="accordion__caption title-s">Доставка по Казахстану</div>
+                  <div class="accordion__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__content color-grey"><p>Бонусы за покупки и рекомендации. Постоянным клиентам — ранний доступ к дропам и закрытым сейлам.</p></div>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__head">
+                  <div class="accordion__caption title-s">Можно ли с примеркой?</div>
+                  <div class="accordion__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__content color-grey"><p>Бонусы за покупки и рекомендации. Постоянным клиентам — ранний доступ к дропам и закрытым сейлам.</p></div>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__head">
+                  <div class="accordion__caption title-s">Будут ли рестоки?</div>
+                  <div class="accordion__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__content color-grey"><p>Бонусы за покупки и рекомендации. Постоянным клиентам — ранний доступ к дропам и закрытым сейлам.</p></div>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__head">
+                  <div class="accordion__caption title-s">Программа лояльности</div>
+                  <div class="accordion__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__content color-grey">
+                    <p>Бонусы за покупки и рекомендации. Постоянным клиентам — ранний доступ к дропам и закрытым сейлам.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

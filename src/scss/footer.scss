@@ -1,0 +1,82 @@
+.footer {
+  padding: calc(50 * var(--width-multiplier)) 0;
+  font-size: calc(12 * var(--width-multiplier));
+  background-color: var(--color-bg, $color-bg);
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(50 * var(--width-multiplier));
+    @media(max-width: 1024px) {
+      gap: calc(40 * var(--width-multiplier));
+    }
+    @media(max-width: 767px) {
+      gap: calc(30 * var(--width-multiplier));
+    }
+  }
+  &__logo {
+    width: calc(89 * var(--width-multiplier));
+    height: calc(23 * var(--width-multiplier));
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: calc(24 * var(--width-multiplier));
+    @media(max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media(max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: calc(18 * var(--width-multiplier));
+  }
+  &__caption {
+    font-weight: 500;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: calc(14 * var(--width-multiplier));
+    color: var(--light, $light);
+  }
+  &__copy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: calc(16 * var(--width-multiplier));
+    padding-top: calc(24 * var(--width-multiplier));
+    border-top: 1px solid var(--light, $light);
+    @media(max-width: 767px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-top: calc(30 * var(--width-multiplier));
+    }
+  }
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: calc(4 * var(--width-multiplier));
+    svg {
+      display: block;
+      min-width: calc(14 * var(--width-multiplier));
+      width: calc(14 * var(--width-multiplier));
+      height: calc(14 * var(--width-multiplier));
+      pointer-events: none;
+    }
+  }
+  @media(max-width: 1024px) {
+    padding: calc(40 * var(--width-multiplier)) 0;
+  }
+  @media(max-width: 767px) {
+    padding: calc(30 * var(--width-multiplier)) 0;
+  }
+}

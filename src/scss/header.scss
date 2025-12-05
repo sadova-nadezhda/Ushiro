@@ -1,0 +1,177 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  background-color: var(--white, $white);
+  @include transition;
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: calc(160 * var(--width-multiplier));
+    padding: calc(14 * var(--width-multiplier)) 0;
+    text-transform: uppercase;
+    font-size: calc(12 * var(--width-multiplier));
+    line-height: 1.2em;
+    letter-spacing: 4%;
+    @media(max-width: 1024px) {
+      gap: calc(80 * var(--width-multiplier));
+    }
+    @media(max-width: 767px) {
+      gap: calc(16 * var(--width-multiplier));
+    }
+  }
+  &__nav {
+    transition: left 0.3s ease-out;
+    &.open {
+      left: 0;
+    }
+    @media(max-width: 767px) {
+      position: absolute;
+      top: 100%;
+      left: -100%;
+      display: block;
+      min-height: 100dvh;
+      width: 100%;
+      padding: calc(12 * var(--width-multiplier));
+      background-color: var(--color-bg, $color-bg);
+    }
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: calc(32 * var(--width-multiplier));
+    li {
+      @media(max-width: 767px) {
+        width: 100%;
+        border-bottom: 1px solid #E4E4E4;
+      }
+    }
+    a {
+      display: flex;
+      align-items: center;
+      gap: calc(4 * var(--width-multiplier));
+      svg {
+        display: block;
+        min-width: calc(12 * var(--width-multiplier));
+        width: calc(12 * var(--width-multiplier));
+        height: calc(12 * var(--width-multiplier));
+        pointer-events: none;
+      }
+      @media(max-width: 767px) {
+        width: 100%;
+        padding: calc(16 * var(--width-multiplier));
+      }
+    }
+    @media(max-width: 767px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      width: 100%;
+    }
+  }
+  &__logo {
+    min-width: calc(88 * var(--width-multiplier));
+    width: calc(88 * var(--width-multiplier));
+    height: calc(23 * var(--width-multiplier));
+    margin-right: auto;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: calc(20 * var(--width-multiplier));
+  }
+  &__lang {
+    &-list {
+      display: none;
+    }
+    &_mb {
+      display: none;
+      @media(max-width: 767px) {
+        display: block;
+      }
+    }
+    @media(max-width: 767px) {
+      display: none;
+    }
+  }
+  &__store {
+    display: flex;
+    align-items: center;
+    gap: calc(20 * var(--width-multiplier));
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      display: block;
+      min-width: calc(22 * var(--width-multiplier));
+      width: calc(22 * var(--width-multiplier));
+      height: calc(22 * var(--width-multiplier));
+      pointer-events: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__cart {
+    position: relative;
+    span {
+      position: absolute;
+      top: calc(-4 * var(--width-multiplier));
+      right: calc(-4 * var(--width-multiplier));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(15 * var(--width-multiplier));
+      height: calc(15 * var(--width-multiplier));
+      border-radius: 100%;
+      border: calc(1.5 * var(--width-multiplier)) solid var(--white, $white);
+      color: var(--white, $white);
+      background-color: var(--dark, $dark);
+      font-size: calc(8 * var(--width-multiplier));
+      font-weight: 500;
+      line-height: 1.2em;
+    }
+  }
+  &__burger {
+    position: relative;
+    display: none;
+    width: calc(20 * var(--width-multiplier));
+    height: calc(20 * var(--width-multiplier));
+    cursor: pointer;
+    @include transition;
+    span {
+      position: absolute;
+      right: calc(2 * var(--width-multiplier));
+      left: calc(2 * var(--width-multiplier));
+      display: block;
+      height: calc(2 * var(--width-multiplier));
+      width: calc(100% - calc(4 * var(--width-multiplier)));
+      border-radius: calc(4 * var(--width-multiplier));
+      background-color: var(--dark, $dark);
+      pointer-events: none;
+      @include transition;
+      &:nth-child(1){
+        top: calc(5 * var(--width-multiplier));
+      }
+      &:nth-child(2){
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:nth-child(3){
+        bottom: calc(5 * var(--width-multiplier));
+      }
+    }
+    @media(max-width: 767px) {
+      display: block;
+    }
+  }
+}
