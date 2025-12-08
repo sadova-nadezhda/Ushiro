@@ -2273,8 +2273,12 @@
   top: 0;
   left: 0;
   right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   height: 100%;
+  padding: 0 calc(16 * var(--width-multiplier));
   z-index: 9;
   opacity: 0;
   pointer-events: none;
@@ -2282,6 +2286,9 @@
   backdrop-filter: blur(calc(4 * var(--width-multiplier)));
   overflow-x: hidden;
   overflow-y: auto;
+  @media (max-width: 767px) {
+    padding: 0;
+  }
 }
 
 .modal {
@@ -2425,6 +2432,91 @@
       transform: scale(0.95);
       box-shadow: rgba(50, 50, 93, 0.1) 0px 50px 100px -20px,
        rgba(0, 0, 0, 0.15) 0px 30px 60px -30px;
+    }
+  }
+  &-welcome {
+    max-width: calc(994 * var(--width-multiplier));
+    width: 100%;
+    border-radius: 0;
+    @media (max-width: 767px) {
+      width: 100%;
+      margin: 0;
+      margin-top: auto;
+    }
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @media (max-width: 767px) {
+        grid-template-columns: 100%;
+      }
+    }
+    &__close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: max-content;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      background-color: transparent;
+      z-index: 1;
+      svg {
+        display: block;
+        width: calc(40 * var(--width-multiplier));
+        min-width: calc(40 * var(--width-multiplier));
+        height: calc(40 * var(--width-multiplier));
+        pointer-events: none;
+      }
+      path {
+        @media (max-width: 767px) {
+          stroke: var(--white);
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__img {
+      height: calc(418 * var(--width-multiplier));
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @media (max-width: 767px) {
+        height: calc(210 * var(--width-multiplier));
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: calc(24 * var(--width-multiplier));
+      text-align: center;
+    }
+    &__title {
+      margin-bottom: calc(12 * var(--width-multiplier));
+      font-size: calc(24 * var(--width-multiplier));
+      font-weight: 700;
+    }
+    &__desc {
+      margin-bottom: calc(48 * var(--width-multiplier));
+      font-weight: 300;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: calc(16 * var(--width-multiplier));
+      width: 100%;
+    }
+    input, label {
+      background-color: #F6F6F6;
+    }
+    input {
+      border-radius: 0;
+      border: 0;
     }
   }
 }

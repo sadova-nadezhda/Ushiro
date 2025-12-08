@@ -2870,8 +2870,12 @@ h4 {
   top: 0;
   left: 0;
   right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   height: 100%;
+  padding: 0 calc(16 * var(--width-multiplier));
   z-index: 9;
   opacity: 0;
   pointer-events: none;
@@ -3038,6 +3042,91 @@ h4 {
 .modal__social:hover {
   transform: scale(0.95);
   box-shadow: rgba(50, 50, 93, 0.1) 0px 50px 100px -20px, rgba(0, 0, 0, 0.15) 0px 30px 60px -30px;
+}
+
+.modal-welcome {
+  max-width: calc(994 * var(--width-multiplier));
+  width: 100%;
+  border-radius: 0;
+}
+
+.modal-welcome__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.modal-welcome__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.modal-welcome__close svg {
+  display: block;
+  width: calc(40 * var(--width-multiplier));
+  min-width: calc(40 * var(--width-multiplier));
+  height: calc(40 * var(--width-multiplier));
+  pointer-events: none;
+}
+
+.modal-welcome__close:hover {
+  cursor: pointer;
+}
+
+.modal-welcome__img {
+  height: calc(418 * var(--width-multiplier));
+  overflow: hidden;
+}
+
+.modal-welcome__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modal-welcome__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: calc(24 * var(--width-multiplier));
+  text-align: center;
+}
+
+.modal-welcome__title {
+  margin-bottom: calc(12 * var(--width-multiplier));
+  font-size: calc(24 * var(--width-multiplier));
+  font-weight: 700;
+}
+
+.modal-welcome__desc {
+  margin-bottom: calc(48 * var(--width-multiplier));
+  font-weight: 300;
+}
+
+.modal-welcome form {
+  display: flex;
+  flex-direction: column;
+  gap: calc(16 * var(--width-multiplier));
+  width: 100%;
+}
+
+.modal-welcome input,
+.modal-welcome label {
+  background-color: #F6F6F6;
+}
+
+.modal-welcome input {
+  border-radius: 0;
+  border: 0;
 }
 
 @media (min-width: 768px) {
@@ -3689,6 +3778,10 @@ h4 {
     font-size: calc(22 * var(--width-multiplier));
   }
 
+  .modals {
+    padding: 0;
+  }
+
   .modal {
     width: calc(100% - 16 * var(--width-multiplier));
     margin: calc(50 * var(--width-multiplier)) auto;
@@ -3697,6 +3790,24 @@ h4 {
   .modal__container {
     padding: calc(16 * var(--width-multiplier));
     padding-top: calc(32 * var(--width-multiplier));
+  }
+
+  .modal-welcome {
+    width: 100%;
+    margin: 0;
+    margin-top: auto;
+  }
+
+  .modal-welcome__container {
+    grid-template-columns: 100%;
+  }
+
+  .modal-welcome__close path {
+    stroke: var(--white);
+  }
+
+  .modal-welcome__img {
+    height: calc(210 * var(--width-multiplier));
   }
 }
 
