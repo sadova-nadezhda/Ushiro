@@ -568,6 +568,16 @@ window.addEventListener("load", function () {
     });
   }
 
+  // ====== Favorite Card ======
+  document.addEventListener("click", function (e) {
+    const fav = e.target.closest(".catalog__favorites");
+    if (!fav) return;
+
+    fav.classList.toggle("active");
+
+    e.preventDefault();
+  });
+
   document
     .querySelectorAll('input[data-placeholder], textarea[data-placeholder]')
     .forEach(initField);
