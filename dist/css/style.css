@@ -2447,6 +2447,12 @@ h4 {
   font-weight: 600;
 }
 
+.profile-order__title {
+  margin-bottom: calc(20 * var(--width-multiplier));
+  padding-bottom: calc(20 * var(--width-multiplier));
+  border-bottom: 1px solid #F2F2F7;
+}
+
 .profile__table {
   font-size: calc(14 * var(--width-multiplier));
   line-height: 1;
@@ -2475,6 +2481,7 @@ h4 {
 
 .profile__heading {
   margin-bottom: calc(14 * var(--width-multiplier));
+  font-weight: 600;
 }
 
 .profile__col {
@@ -2573,6 +2580,11 @@ h4 {
   flex-direction: column;
   justify-content: center;
   gap: calc(8 * var(--width-multiplier));
+}
+
+.profile-card__caption {
+  font-size: calc(16 * var(--width-multiplier));
+  font-weight: 600;
 }
 
 .profile-total {

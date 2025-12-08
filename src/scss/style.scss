@@ -1819,6 +1819,13 @@
       margin-top: 0;
     }
   }
+  &-order {
+    &__title {
+      margin-bottom: calc(20 * var(--width-multiplier));
+      padding-bottom: calc(20 * var(--width-multiplier));
+      border-bottom: 1px solid #F2F2F7;
+    }
+  }
   &__table {
     font-size: calc(14 * var(--width-multiplier));
     line-height: 1;
@@ -1858,6 +1865,7 @@
   }
   &__heading {
     margin-bottom: calc(14 * var(--width-multiplier));
+    font-weight: 600;
   }
   &__col {
     display: flex;
@@ -1943,6 +1951,10 @@
       flex-direction: column;
       justify-content: center;
       gap: calc(8 * var(--width-multiplier));
+    }
+    &__caption {
+      font-size: calc(16 * var(--width-multiplier));
+      font-weight: 600;
     }
   }
   &-total {
