@@ -45,10 +45,13 @@ window.addEventListener("load", function () {
   // ====== Preloader ======
 
   const innerBars = document.querySelectorAll(".inner-bar");
+  const hasSeenPreloader = localStorage.getItem('preloaderShown') === '1';
 
   function runPreloaderTimeline() {
     const preloaderTl = gsap.timeline({
       onComplete() {
+        localStorage.setItem('preloaderShown', '1');
+
         if (window.openModal) {
           window.openModal('welcome');
         }
@@ -61,21 +64,21 @@ window.addEventListener("load", function () {
       ease: "none",
       delay: 0.4,
     });
-    preloaderTl.to(".preloader", {
-      display: "none",
-      duration: 0,
-      ease: "none",
-    });
-    preloaderTl.to(".site-main", {
-      display: "block",
-      duration: 0,
-    });
-    preloaderTl.to(".site-main", {
-      opacity: 1,
-      transform: "translateY(0)",
-      duration: 0.4,
-      ease: "none",
-    });
+      preloaderTl.to(".preloader", {
+        display: "none",
+        duration: 0,
+        ease: "none",
+      });
+      preloaderTl.to(".site-main", {
+        display: "block",
+        duration: 0,
+      });
+      preloaderTl.to(".site-main", {
+        opacity: 1,
+        transform: "translateY(0)",
+        duration: 0.4,
+        ease: "none",
+      });
   }
 
   function animateBars(startIndex = 0) {
@@ -115,15 +118,36 @@ window.addEventListener("load", function () {
     }, 200);
   }
 
-  setTimeout(() => {
-    animateBars();
-  }, 1000);
+  // Старт
+  if (hasSeenPreloader) {
+    const preloader = document.querySelector('.preloader');
+    const overlay = document.querySelector('.preloader-overlay');
+    const siteMain = document.querySelector('.site-main');
+
+    if (preloader) preloader.style.display = 'none';
+    if (overlay) overlay.style.transform = "translateX(0)";
+    if (siteMain) {
+      siteMain.style.display = 'block';
+      siteMain.style.opacity = 1;
+      siteMain.style.transform = 'translateY(0)';
+    }
+
+    if (window.openModal) {
+      window.openModal('welcome');
+    }
+  } else {
+    setTimeout(() => {
+      animateBars();
+    }, 1000);
+  }
 
   // ====== Lenis ======
 
   const lenis = new Lenis({
     autoRaf: true,
   });
+
+  window.lenis = lenis;
 
   // ====== Size / Multiplier ======
 
@@ -336,11 +360,19 @@ window.addEventListener("load", function () {
   const showWrapper = () => {
     modalWrapper.style.opacity = 1;
     modalWrapper.style.pointerEvents = 'all';
+
+    if (window.lenis) {
+      window.lenis.stop();
+    }
   };
 
   const hideWrapper = () => {
     modalWrapper.style.opacity = 0;
     modalWrapper.style.pointerEvents = 'none';
+
+    if (window.lenis) {
+      window.lenis.start();
+    }
   };
 
   const openModal = (type) => {
@@ -363,6 +395,8 @@ window.addEventListener("load", function () {
       );
     }
   };
+
+  window.openModal = openModal;
 
   const getModalTypeFromUrl = () => {
     let type = null;
@@ -461,6 +495,84 @@ window.addEventListener("load", function () {
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modalWrapper.style.pointerEvents === 'all') {
       closeCurrentModal();
+    }
+  });
+
+  // ====== Search ======
+
+  const searchBtn = document.getElementById('search-btn');
+  const search = document.getElementById('search');
+  const searchInput = search.querySelector('.search-input');
+
+  let isSearchOpen = false;
+
+  const openSearch = () => {
+    if (isSearchOpen) return;
+    isSearchOpen = true;
+
+    search.style.display = 'block';
+
+    if (window.lenis) {
+      window.lenis.stop();
+    }
+    document.body.classList.add('search-open');
+
+    if (window.gsap) {
+      gsap.fromTo(
+        search,
+        { y: '-100%' },
+        { y: '0%', duration: 0.5, ease: 'power3.out' }
+      );
+    }
+
+    if (searchInput) {
+      searchInput.focus();
+    }
+  };
+
+  const closeSearch = () => {
+    if (!isSearchOpen) return;
+    isSearchOpen = false;
+
+    if (window.gsap) {
+      gsap.to(search, {
+        y: '-100%',
+        duration: 0.4,
+        ease: 'power3.in',
+        onComplete() {
+          search.style.display = 'none';
+          search.style.removeProperty('transform');
+        },
+      });
+    } else {
+      search.style.display = 'none';
+      search.style.removeProperty('transform');
+    }
+
+    if (window.lenis) {
+      window.lenis.start();
+    }
+    document.body.classList.remove('search-open');
+  };
+
+  const toggleSearch = () => {
+    if (isSearchOpen) {
+      closeSearch();
+    } else {
+      openSearch();
+    }
+  };
+
+  // клик по иконке в шапке
+  searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleSearch();
+  });
+
+  // закрытие по Esc
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isSearchOpen) {
+      closeSearch();
     }
   });
 
