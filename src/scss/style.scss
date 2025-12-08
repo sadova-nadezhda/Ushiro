@@ -232,6 +232,27 @@
   }
 }
 
+.password-field {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: calc(12 * var(--width-multiplier));
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(24 * var(--width-multiplier));
+  height: calc(24 * var(--width-multiplier));
+  border: none;
+  background: url('../img/eyes-open.svg') center/contain no-repeat;
+  cursor: pointer;
+}
+
+.toggle-password.active {
+  background-image: url('../img/eyes-open.svg');
+}
+
+
 .pagination {
   display: flex;
   align-items: center;

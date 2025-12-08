@@ -317,6 +317,7 @@ window.addEventListener("load", function () {
   });
 
   // ====== Modals ======
+
   (function () {
     const modalWrapper = document.querySelector('.modals');
     if (!modalWrapper) return;
@@ -358,12 +359,69 @@ window.addEventListener("load", function () {
       }
     };
 
+    const getModalTypeFromUrl = () => {
+      let type = null;
+
+      try {
+        const url = new URL(window.location.href);
+
+        // ?modal=type
+        const fromQuery = url.searchParams.get('modal');
+        if (fromQuery) return fromQuery;
+
+        if (url.hash) {
+          const hash = url.hash.replace('#', '');
+          if (!hash) return null;
+
+          const [key, value] = hash.split('=');
+          if (key === 'modal' && value) {
+            return value;
+          }
+
+          return hash;
+        }
+      } catch (e) {}
+
+      return type;
+    };
+
+    const openModalFromUrlOrPath = () => {
+      const typeFromUrl = getModalTypeFromUrl();
+      if (typeFromUrl && getModalByType(typeFromUrl)) {
+        openModal(typeFromUrl);
+        return;
+      }
+
+      const path = window.location.pathname.split('/').filter(Boolean);
+      const last = path[path.length - 1];
+
+      if (!last) return;
+
+      if (getModalByType(last)) {
+        openModal(last);
+      }
+    };
+
+    openModalFromUrlOrPath();
+
     const closeCurrentModal = () => {
       const current = modals.find((m) => m.style.display !== 'none');
 
       const finishClose = () => {
         if (current) current.style.display = 'none';
         hideWrapper();
+
+        const url = new URL(window.location.href);
+
+        if (url.searchParams.has('modal')) {
+          url.searchParams.delete('modal');
+        }
+
+        if (url.hash) {
+          url.hash = '';
+        }
+
+        history.replaceState(null, '', url.toString());
       };
 
       if (current && window.gsap) {
@@ -400,20 +458,6 @@ window.addEventListener("load", function () {
         closeCurrentModal();
       }
     });
-
-    const openModalFromPath = () => {
-      const path = window.location.pathname.split('/').filter(Boolean);
-      const last = path[path.length - 1];
-
-      if (!last) return;
-
-      const modal = getModalByType(last);
-      if (modal) {
-        openModal(last);
-      }
-    };
-
-    openModalFromPath();
   })();
 
   // ====== Form: profile ======
@@ -452,6 +496,19 @@ window.addEventListener("load", function () {
       checkChanges();
     }
   }
+
+  // ====== Form: password ======
+
+  document.querySelectorAll('.password-field').forEach(field => {
+    const input = field.querySelector('input');
+    const toggle = field.querySelector('.toggle-password');
+
+    toggle.addEventListener('click', () => {
+      const isPassword = input.type === 'password';
+      input.type = isPassword ? 'text' : 'password';
+      toggle.classList.toggle('active', isPassword);
+    });
+  });
 
   // ====== Form: support ======
 
