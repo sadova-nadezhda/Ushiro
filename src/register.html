@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Sign up" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <div class="breadcrumbs section-top section-hidden">
+        <div class="container">
+          <div class="breadcrumbs__list text-xs text-up">
+            <a href="/">
+              <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.66699 9.3737L2.00033 5.04036L6.66699 0.707031" stroke="#8E8E93" stroke-linecap="square"/>
+              </svg>
+              Back
+            </a>
+            <span>Sign up</span>
+          </div>
+        </div>
+      </div>
+      <section class="registration section-hidden">
+        <div class="container">
+          <div class="registration__container section-pad">
+            <div class="registration__wrap">
+              <div class="registration__img"><img src="@img/register.png" alt=""></div>
+              <div class="registration__box">
+                <div class="registration__top">
+                  <h1 class="registration__title title">Sign up</h1>
+                  <div class="registration__desc">Already have an account? <a href="">Login</a></div>
+                </div>
+                <form action="" id="registrationForm" class="registration__form form-registration">
+                  <div class="form__fieldset">
+                    <div class="form__field">
+                      <input type="text" name="email" data-placeholder="Email address" required>
+                      <span class="form-error text-xs">Введите имя</span>
+                    </div>
+                  </div>
+                  <div class="form__fieldset">
+                    <div class="form__field password-field">
+                      <input type="password" name="new-password" data-placeholder="Enter password" required>
+                      <button type="button" class="toggle-password"></button>
+                      <span class="form-error text-xs">Enter password</span>
+                    </div>
+                    <div class="form__field password-field">
+                      <input type="password" name="repeat-password" data-placeholder="Repeat passwor" required>
+                      <button type="button" class="toggle-password"></button>
+                      <span class="form-error text-xs">Repeat password</span>
+                    </div>
+                  </div>
+                  <button type="submit" class="registration__button form__button button button-dark" disabled>Register</button>
+                </form>
+                <a href="/" class="registration__button registration__back button button-border button-purple">Back</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/foot.html')
+  </body>
+</html>

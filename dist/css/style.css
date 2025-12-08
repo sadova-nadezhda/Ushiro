@@ -2558,6 +2558,118 @@ h4 {
      object-fit: cover;
 }
 
+.registration {
+  background-color: #F5F5F5;
+}
+
+.registration__container {
+  min-height: calc(100dvh - 104 * var(--width-multiplier));
+}
+
+.registration__wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  max-width: calc(1040 * var(--width-multiplier));
+  width: 100%;
+  margin: 0 auto;
+  border-radius: calc(12 * var(--width-multiplier));
+  overflow: hidden;
+}
+
+.registration__img {
+  height: calc(625 * var(--width-multiplier));
+  overflow: hidden;
+}
+
+.registration__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
+}
+
+.registration__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: calc(64 * var(--width-multiplier));
+  background-color: var(--white);
+}
+
+.registration__top {
+  display: flex;
+  flex-direction: column;
+  gap: calc(12 * var(--width-multiplier));
+  margin-bottom: calc(50 * var(--width-multiplier));
+}
+
+.registration__desc {
+  font-weight: 300;
+}
+
+.registration__desc a {
+  position: relative;
+  display: inline-block;
+  color: var(--dark, #090909);
+  font-weight: 500;
+}
+
+.registration__desc a::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--dark, #090909);
+}
+
+.registration__form {
+  display: flex;
+  flex-direction: column;
+  gap: calc(32 * var(--width-multiplier));
+}
+
+.registration__form .form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: calc(18 * var(--width-multiplier));
+}
+
+.registration__button {
+  width: 100%;
+}
+
+.registration__back {
+  margin-top: calc(12 * var(--width-multiplier));
+}
+
+.registration-pass__box {
+  align-items: center;
+  text-align: center;
+}
+
+.registration-pass__icon {
+  width: calc(120 * var(--width-multiplier));
+  height: calc(120 * var(--width-multiplier));
+  margin-bottom: calc(50 * var(--width-multiplier));
+}
+
+.registration-pass__icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.registration-pass__title {
+  margin-bottom: calc(32 * var(--width-multiplier));
+}
+
 .page {
   background-color: #F5F5F5;
 }
@@ -2916,6 +3028,14 @@ h4 {
 
   .policy__wrap {
     gap: calc(50 * var(--width-multiplier));
+  }
+
+  .registration__img {
+    height: calc(554 * var(--width-multiplier));
+  }
+
+  .registration__box {
+    padding: calc(32 * var(--width-multiplier));
   }
 }
 
@@ -3349,6 +3469,36 @@ h4 {
 
   .contact {
     padding: calc(50 * var(--width-multiplier)) 0;
+  }
+
+  .registration__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .registration__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .registration__img {
+    display: none;
+  }
+
+  .registration__box {
+    padding: calc(32 * var(--width-multiplier)) calc(16 * var(--width-multiplier));
+  }
+
+  .registration__top {
+    margin-bottom: calc(42 * var(--width-multiplier));
+  }
+
+  .registration__form .form__fieldset {
+    gap: calc(12 * var(--width-multiplier));
+  }
+
+  .registration__form {
+    gap: calc(24 * var(--width-multiplier));
   }
 
   .page__button {
