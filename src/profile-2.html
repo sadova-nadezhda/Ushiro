@@ -18,14 +18,233 @@
           </div>
         </div>
       </div>
-      <section class="profile section-hidden">
+      <section class="profile profile-order section-hidden">
         <div class="container">
-          <div class="profile__container">
+          <div class="profile__container profile-order__container">
             <div class="profile__left">
               <h1 class="profile__title title">Ваши заказы</h1>
-              <div class="profile__cards"></div>
+              <div class="profile__wrap">
+                <div class="profile__table">
+                  <div class="profile__heading">
+                    <div class="profile__col">Заказ №</div>
+                    <div class="profile__col">Дата</div>
+                    <div class="profile__col">Доставка</div>
+                    <div class="profile__col">Оплата</div>
+                    <div class="profile__col">Статус</div>
+                    <div class="profile__col">Сумма заказа</div>
+                  </div>
+                  <div class="profile__accordion accordion">
+                    <div class="profile__item accordion__item">
+                      <div class="profile__head accordion__head">
+                        <div class="profile__col">
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.5996 7.80078L8.99961 11.4008L5.39961 7.80078" stroke="#6E7077" stroke-linecap="square"/>
+                          </svg>
+                          <span>№21300</span>
+                        </div>
+                        <div class="profile__col">Декабрь 1, 2025</div>
+                        <div class="profile__col">Самовывоз</div>
+                        <div class="profile__col">
+                          <span class="payment success">Оплачено</span>
+                          <!-- <span class="payment warning">Не Оплачено</span> -->
+                        </div>
+                        <div class="profile__col">
+                          <span class="status success">Доставлен</span>
+                          <!-- <span class="status default">Ожидает</span> -->
+                          <!-- <span class="status waiting">В пути</span> -->
+                        </div>
+                        <div class="profile__col">39 100 ₸</div>
+                      </div>
+                      <div class="profile__body accordion__body">
+                        <div class="profile__box">
+                          <div class="profile__caption">Ваш заказ уже в пути</div>
+                          <div class="profile__rows">
+                            <div class="profile__row">
+                              <div class="profile__card profile-card">
+                                <div class="profile-card__img"><img src="@img/product-inner-1.png" alt=""></div>
+                                <div class="profile-card__content">
+                                  <div class="profile-card__name text-up color-light">T-SHIRT</div>
+                                  <div class="profile-card__caption">Yankees Chainstitch Pocket Tee</div>
+                                  <div class="profile-card__size color-light">Size L</div>
+                                </div>
+                              </div>
+                              <div class="profile__total profile-total">
+                                <div class="profile-total__item">
+                                  <span>Количество:</span> 1
+                                </div>
+                                <div class="profile-total__item">
+                                  <span>Стоимость:</span> 39 100 ₸
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="profile__item accordion__item">
+                      <div class="profile__head accordion__head">
+                        <div class="profile__col">
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.5996 7.80078L8.99961 11.4008L5.39961 7.80078" stroke="#6E7077" stroke-linecap="square"/>
+                          </svg>
+                          <span>№21300</span>
+                        </div>
+                        <div class="profile__col">Декабрь 1, 2025</div>
+                        <div class="profile__col">Самовывоз</div>
+                        <div class="profile__col">
+                          <!-- <span class="payment success">Оплачено</span> -->
+                          <span class="payment warning">Не Оплачено</span>
+                        </div>
+                        <div class="profile__col">
+                          <!-- <span class="status success">Доставлен</span> -->
+                          <span class="status default">Ожидает</span>
+                          <!-- <span class="status waiting">В пути</span> -->
+                        </div>
+                        <div class="profile__col">39 100 ₸</div>
+                      </div>
+                      <div class="profile__body accordion__body">
+                        <div class="profile__box">
+                          <div class="profile__caption">Ваш заказ уже в пути</div>
+                          <div class="profile__rows">
+                            <div class="profile__row">
+                              <div class="profile__card profile-card">
+                                <div class="profile-card__img"><img src="@img/product-inner-1.png" alt=""></div>
+                                <div class="profile-card__content">
+                                  <div class="profile-card__name text-up color-light">T-SHIRT</div>
+                                  <div class="profile-card__caption">Yankees Chainstitch Pocket Tee</div>
+                                  <div class="profile-card__size color-light">Size L</div>
+                                </div>
+                              </div>
+                              <div class="profile__total profile-total">
+                                <div class="profile-total__item">
+                                  <span>Количество:</span> 1
+                                </div>
+                                <div class="profile-total__item">
+                                  <span>Стоимость:</span> 39 100 ₸
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="profile__item accordion__item">
+                      <div class="profile__head accordion__head">
+                        <div class="profile__col">
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.5996 7.80078L8.99961 11.4008L5.39961 7.80078" stroke="#6E7077" stroke-linecap="square"/>
+                          </svg>
+                          <span>№21300</span>
+                        </div>
+                        <div class="profile__col">Декабрь 1, 2025</div>
+                        <div class="profile__col">Самовывоз</div>
+                        <div class="profile__col">
+                          <span class="payment success">Оплачено</span>
+                          <!-- <span class="payment warning">Не Оплачено</span> -->
+                        </div>
+                        <div class="profile__col">
+                          <!-- <span class="status success">Доставлен</span> -->
+                          <!-- <span class="status default">Ожидает</span> -->
+                          <span class="status waiting">В пути</span>
+                        </div>
+                        <div class="profile__col">39 100 ₸</div>
+                      </div>
+                      <div class="profile__body accordion__body">
+                        <div class="profile__box">
+                          <div class="profile__caption">Ваш заказ уже в пути</div>
+                          <div class="profile__rows">
+                            <div class="profile__row">
+                              <div class="profile__card profile-card">
+                                <div class="profile-card__img"><img src="@img/product-inner-1.png" alt=""></div>
+                                <div class="profile-card__content">
+                                  <div class="profile-card__name text-up color-light">T-SHIRT</div>
+                                  <div class="profile-card__caption">Yankees Chainstitch Pocket Tee</div>
+                                  <div class="profile-card__size color-light">Size L</div>
+                                </div>
+                              </div>
+                              <div class="profile__total profile-total">
+                                <div class="profile-total__item">
+                                  <span>Количество:</span> 1
+                                </div>
+                                <div class="profile-total__item">
+                                  <span>Стоимость:</span> 39 100 ₸
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="profile__item accordion__item">
+                      <div class="profile__head accordion__head">
+                        <div class="profile__col">
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.5996 7.80078L8.99961 11.4008L5.39961 7.80078" stroke="#6E7077" stroke-linecap="square"/>
+                          </svg>
+                          <span>№21300</span>
+                        </div>
+                        <div class="profile__col">Декабрь 1, 2025</div>
+                        <div class="profile__col">Самовывоз</div>
+                        <div class="profile__col">
+                          <span class="payment success">Оплачено</span>
+                          <!-- <span class="payment warning">Не Оплачено</span> -->
+                        </div>
+                        <div class="profile__col">
+                          <span class="status success">Доставлен</span>
+                          <!-- <span class="status default">Ожидает</span> -->
+                          <!-- <span class="status waiting">В пути</span> -->
+                        </div>
+                        <div class="profile__col">39 100 ₸</div>
+                      </div>
+                      <div class="profile__body accordion__body">
+                        <div class="profile__box">
+                          <div class="profile__caption">Ваш заказ уже в пути</div>
+                          <div class="profile__rows">
+                            <div class="profile__row">
+                              <div class="profile__card profile-card">
+                                <div class="profile-card__img"><img src="@img/product-inner-1.png" alt=""></div>
+                                <div class="profile-card__content">
+                                  <div class="profile-card__name text-up color-light">T-SHIRT</div>
+                                  <div class="profile-card__caption">Yankees Chainstitch Pocket Tee</div>
+                                  <div class="profile-card__size color-light">Size L</div>
+                                </div>
+                              </div>
+                              <div class="profile__total profile-total">
+                                <div class="profile-total__item">
+                                  <span>Количество:</span> 1
+                                </div>
+                                <div class="profile-total__item">
+                                  <span>Стоимость:</span> 39 100 ₸
+                                </div>
+                              </div>
+                            </div>
+                            <div class="profile__row">
+                              <div class="profile__card profile-card">
+                                <div class="profile-card__img"><img src="@img/product-inner-1.png" alt=""></div>
+                                <div class="profile-card__content">
+                                  <div class="profile-card__name text-up color-light">T-SHIRT</div>
+                                  <div class="profile-card__caption">Yankees Chainstitch Pocket Tee</div>
+                                  <div class="profile-card__size color-light">Size L</div>
+                                </div>
+                              </div>
+                              <div class="profile__total profile-total">
+                                <div class="profile-total__item">
+                                  <span>Количество:</span> 1
+                                </div>
+                                <div class="profile-total__item">
+                                  <span>Стоимость:</span> 39 100 ₸
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <ul class="profile__aside text-xs text-up">
+            <ul class="profile__aside profile-order__aside text-xs text-up">
               <li><a href="profile.html">профиль</a></li>
               <li><a href="profile-2.html" class="active">заказы</a></li>
               <li><a href="profile-3.html">служба поддержки</a></li>
