@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главная</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.15/dist/lenis.css?_v=20251208102959">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20251208102959" />
+  <link rel="stylesheet" href="css/style.css?_v=20251208102959" />
+</head>
+
+  <body>
+    <header class="header">
+  <div class="container">
+    <div class="header__container">
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li>
+            <a href="">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.5 1L1.5 7H6L5.5 11L10.5 5H6L6.5 1Z" stroke="black" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              new arrivals
+            </a>
+          </li>
+          <li>
+            <a href="">mens</a>
+          </li>
+          <li>
+            <a href="">womans</a>
+          </li>
+          <li>
+            <a href="">accessories</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="/" class="header__logo">
+        <img src="img/logo.svg" alt="Website logo" />
+      </a>
+      <div class="header__box">
+        <div class="header__lang">
+          <div class="header__lang-current">Eng</div>
+          <ul class="header__lang-list">
+            <li><a href="">Қаз</a></li>
+            <li><a href="">Рус</a></li>
+          </ul>
+        </div>
+        <div class="header__store">
+          <div class="header__search header__icon modal-btn" data-type="search">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.42782 3.14211C8.18463 3.14211 6.96935 3.51076 5.93567 4.20144C4.90199 4.89213 4.09633 5.87382 3.62058 7.02239C3.14483 8.17095 3.02035 9.4348 3.26289 10.6541C3.50542 11.8734 4.10408 12.9934 4.98315 13.8725C5.86223 14.7516 6.98223 15.3502 8.20154 15.5928C9.42085 15.8353 10.6847 15.7108 11.8333 15.2351C12.9818 14.7593 13.9635 13.9537 14.6542 12.92C15.3449 11.8863 15.7135 10.671 15.7135 9.42782C15.7115 7.76139 15.0485 6.1638 13.8702 4.98545C12.6918 3.8071 11.0943 3.14419 9.42782 3.14211ZM20.1976 20.1976C20.0503 20.3449 19.8505 20.4277 19.6421 20.4277C19.4338 20.4277 19.234 20.3449 19.0866 20.1976L14.3967 15.5077C12.8337 16.7856 10.8394 17.4139 8.82618 17.2626C6.81297 17.1113 4.93492 16.1921 3.58049 14.6949C2.22606 13.1978 1.49887 11.2374 1.54934 9.2191C1.5998 7.20085 2.42407 5.2792 3.85163 3.85163C5.2792 2.42407 7.20085 1.5998 9.2191 1.54934C11.2374 1.49887 13.1978 2.22606 14.6949 3.58049C16.1921 4.93492 17.1113 6.81297 17.2626 8.82618C17.4139 10.8394 16.7856 12.8337 15.5077 14.3967L20.1976 19.0866C20.3449 19.234 20.4277 19.4338 20.4277 19.6421C20.4277 19.8505 20.3449 20.0503 20.1976 20.1976Z" fill="#0A0B12"/>
+            </svg>
+          </div>
+          <a class="header__cart header__icon" href="bag.html">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.4523 14.9286H9.47511C8.39082 14.9286 7.44796 14.19 7.18868 13.145L5.52296 6.47429C5.49436 6.35859 5.49245 6.2379 5.51738 6.12136C5.54231 6.00482 5.59342 5.89548 5.66686 5.80161C5.74029 5.70774 5.83411 5.6318 5.94122 5.57955C6.04833 5.52729 6.16593 5.50009 6.28511 5.5H19.6423C19.7613 5.50055 19.8786 5.52805 19.9855 5.58044C20.0924 5.63283 20.186 5.70875 20.2594 5.8025C20.3327 5.89626 20.3838 6.0054 20.409 6.12175C20.4341 6.2381 20.4325 6.35863 20.4044 6.47429L18.7387 13.1371C18.613 13.6485 18.3194 14.1029 17.9048 14.4277C17.4903 14.7525 16.9788 14.9289 16.4523 14.9286ZM7.29082 7.07143L8.71296 12.76C8.79939 13.1136 9.11368 13.3571 9.47511 13.3571H16.4523C16.8137 13.3571 17.128 13.1136 17.2144 12.76L18.6365 7.07143H7.29082Z" fill="#090909"/>
+              <path d="M6.2846 7.07366C5.92317 7.07366 5.60888 6.83009 5.52246 6.47652L4.88603 3.9308H2.35603C1.92388 3.9308 1.57031 3.57723 1.57031 3.14509C1.57031 2.71295 1.92388 2.35938 2.35603 2.35938H5.49888C5.86031 2.35938 6.1746 2.60295 6.26103 2.95652L7.04674 6.09938C7.07534 6.21507 7.07725 6.33576 7.05232 6.4523C7.02739 6.56884 6.97628 6.67819 6.90285 6.77205C6.82942 6.86592 6.7356 6.94186 6.62849 6.99411C6.52137 7.04637 6.40378 7.07357 6.2846 7.07366ZM8.64174 19.6451C7.77746 19.6451 7.07031 18.9379 7.07031 18.0737C7.07031 17.2094 7.77746 16.5022 8.64174 16.5022C9.50603 16.5022 10.2132 17.2094 10.2132 18.0737C10.2132 18.9379 9.50603 19.6451 8.64174 19.6451ZM17.2846 19.6451C16.4203 19.6451 15.7132 18.9379 15.7132 18.0737C15.7132 17.2094 16.4203 16.5022 17.2846 16.5022C18.1489 16.5022 18.856 17.2094 18.856 18.0737C18.856 18.9379 18.1489 19.6451 17.2846 19.6451Z" fill="#090909"/>
+            </svg>
+            <span>4</span>
+          </a>
+          <a class="header__favorites header__icon" href="wishlist.html">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.49316 4.89258C7.8425 4.61708 9.26045 4.9635 10.3193 5.85352L10.3311 5.86328L10.3438 5.87305C10.6809 6.13481 11.0462 6.55292 11.3828 6.96094L12 7.70898L12.6172 6.96094C13.0106 6.48397 13.2367 6.14804 13.6016 5.91211L13.6309 5.89355L13.6582 5.87305C14.7229 5.04703 16.1602 4.6903 17.5342 4.89746C19.6375 5.31557 21.2 7.23564 21.2002 9.44238C21.2002 10.5975 20.7057 11.7651 19.8594 12.5859L12.0264 20.1826C12.0184 20.1904 12.0108 20.195 12.0059 20.1992C12.0041 20.1993 12.0021 20.2002 12 20.2002C11.9975 20.2002 11.9952 20.1993 11.9932 20.1992C11.9883 20.195 11.9813 20.1901 11.9736 20.1826L4.14062 12.5859L4.13867 12.583L3.98145 12.4248C3.62651 12.0476 3.34312 11.6134 3.14258 11.1426C2.91317 10.6039 2.79601 10.0272 2.7998 9.44727V9.44238C2.79995 7.22876 4.37305 5.30353 6.48633 4.89355L6.49316 4.89258Z" stroke="#090909" stroke-width="1.6"/>
+            </svg>
+          </a>
+          <!-- <a class="header__profile header__icon" href="profile.html">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.9989 20.4275C5.81317 20.4275 1.57031 16.1846 1.57031 10.9989C1.57031 5.81317 5.81317 1.57031 10.9989 1.57031C16.1846 1.57031 20.4275 5.81317 20.4275 10.9989C20.4275 16.1846 16.1846 20.4275 10.9989 20.4275ZM5.42031 16.4989C6.8346 17.9917 8.79888 18.856 10.9989 18.856C13.1989 18.856 15.1632 17.9132 16.5775 16.4989C15.0846 15.006 13.0417 14.1417 10.9989 14.1417C8.87746 14.1417 6.8346 15.006 5.42031 16.4989ZM10.9989 12.5703C13.4346 12.5703 15.8703 13.5132 17.5989 15.2417C18.3846 13.9846 18.856 12.5703 18.856 10.9989C18.856 6.67746 15.3203 3.14174 10.9989 3.14174C6.67746 3.14174 3.14174 6.67746 3.14174 10.9989C3.14174 12.5703 3.61317 14.0632 4.39888 15.2417C6.12746 13.5132 8.4846 12.5703 10.9989 12.5703ZM10.9989 10.9989C9.27031 10.9989 7.85603 9.5846 7.85603 7.85603C7.85603 6.12746 9.27031 4.71317 10.9989 4.71317C12.7275 4.71317 14.1417 6.12746 14.1417 7.85603C14.1417 9.5846 12.7275 10.9989 10.9989 10.9989ZM10.9989 6.2846C10.1346 6.2846 9.42746 6.99174 9.42746 7.85603C9.42746 8.72031 10.1346 9.42746 10.9989 9.42746C11.8632 9.42746 12.5703 8.72031 12.5703 7.85603C12.5703 6.99174 11.8632 6.2846 10.9989 6.2846Z" fill="black"/>
+            </svg>
+          </a> -->
+          <a class="header__profile header__icon modal-btn" data-type="login">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.9989 20.4275C5.81317 20.4275 1.57031 16.1846 1.57031 10.9989C1.57031 5.81317 5.81317 1.57031 10.9989 1.57031C16.1846 1.57031 20.4275 5.81317 20.4275 10.9989C20.4275 16.1846 16.1846 20.4275 10.9989 20.4275ZM5.42031 16.4989C6.8346 17.9917 8.79888 18.856 10.9989 18.856C13.1989 18.856 15.1632 17.9132 16.5775 16.4989C15.0846 15.006 13.0417 14.1417 10.9989 14.1417C8.87746 14.1417 6.8346 15.006 5.42031 16.4989ZM10.9989 12.5703C13.4346 12.5703 15.8703 13.5132 17.5989 15.2417C18.3846 13.9846 18.856 12.5703 18.856 10.9989C18.856 6.67746 15.3203 3.14174 10.9989 3.14174C6.67746 3.14174 3.14174 6.67746 3.14174 10.9989C3.14174 12.5703 3.61317 14.0632 4.39888 15.2417C6.12746 13.5132 8.4846 12.5703 10.9989 12.5703ZM10.9989 10.9989C9.27031 10.9989 7.85603 9.5846 7.85603 7.85603C7.85603 6.12746 9.27031 4.71317 10.9989 4.71317C12.7275 4.71317 14.1417 6.12746 14.1417 7.85603C14.1417 9.5846 12.7275 10.9989 10.9989 10.9989ZM10.9989 6.2846C10.1346 6.2846 9.42746 6.99174 9.42746 7.85603C9.42746 8.72031 10.1346 9.42746 10.9989 9.42746C11.8632 9.42746 12.5703 8.72031 12.5703 7.85603C12.5703 6.99174 11.8632 6.2846 10.9989 6.2846Z" fill="black"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="header__burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <!-- <div class="preloader">
+      <div class="site-name">
+        <svg width="734" height="190" viewBox="0 0 734 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M701.978 122.609L701.839 123.065C696.605 144.004 684.823 163.149 661.601 158.994C635.525 154.325 640.467 122.059 648.979 104.015C654.527 92.2169 664.492 77.0534 683.173 77.3646C703.963 77.6976 707.993 103.103 701.985 122.616H701.978V122.609ZM220.764 156.823L220.574 157.112C215.967 162.685 204.098 163.648 196.308 162.787C196.067 162.765 195.848 162.736 195.629 162.714C195.118 162.642 194.615 162.577 194.147 162.504C186.439 161.209 177.423 157.915 173.028 151.329C172.298 150.294 171.722 149.165 171.284 147.971C171.057 145.669 171.86 143.939 172.926 142.209C173.751 140.791 186.738 115.045 188.87 115.045C189.833 115.045 190.716 115.537 191.549 116.03C198.652 120.235 205.412 125.005 211.733 130.296C214.916 132.959 218.033 135.811 220.26 139.3C223.53 144.438 224.64 151.713 220.756 156.844V156.823H220.764ZM723.498 68.8745C714.578 55.9476 702.533 49.5782 684.136 49.5565C665.74 49.5348 652.943 56.6714 642.884 65.5089C632.634 74.5201 627.59 84.5953 621.115 98.5283C617.362 106.628 613.676 119.222 608.413 128.226C600.368 142.035 590.644 152.4 577.555 158.096C568.466 162.591 559.378 158.943 558.933 147.522C558.444 139.401 562.809 131.808 566.087 124.664C572.511 111.513 580.767 99.5561 588.272 87.3023C594.747 76.9376 588.41 60.3627 575.599 59.335C564.305 57.6268 552.063 58.8283 541.157 54.3842C535.31 51.3081 526.827 43.7372 520.089 42.6515C510.73 38.8082 500.817 45.6987 497.524 54.6231C495.955 58.6401 495.415 62.5993 496.429 66.9782C496.94 69.8155 496.97 72.5007 496.692 75.6782C493.539 112.758 473.281 159.624 450.541 159.334C447.314 159.283 444.168 159.573 441.598 155.614C437.722 149.628 438.445 142.491 439.591 135.905C444.022 120.553 447.76 112.816 452.804 97.24C454.76 91.2035 462.214 75.8519 460.097 67.7309C459.396 65.0167 456.396 64.4087 453.432 63.504C447.132 62.0854 438.109 61.4122 433.218 65.1108C425.976 72.2257 424.056 85.6376 420.567 96.6103C412.42 122.204 409.799 146.016 388.746 158.031C380.993 162.461 368.656 159.428 371.269 149.085C377.715 123.731 394.367 86.8246 380.19 63.7718C366.327 42.6443 334.667 50.7435 319.76 65.9142C317.241 68.3172 314.037 71.5164 311.613 73.5792C311.248 73.8687 311.124 73.9628 311.102 73.9628C311.102 73.9411 316.752 53.7835 319.344 44.5044C321.14 38.2581 322.519 32.2724 324.439 26.1925C326.359 20.5903 327.878 14.7566 328.754 9.08204C329.455 4.99985 326.571 1.98887 322.556 1.00452C316.008 -0.985914 306.729 -0.0305073 301.4 3.9793C297.911 6.38229 297.495 10.5875 296.217 14.3295C290.647 32.5474 285.968 50.6205 281.07 68.614C276.054 85.6593 270.265 103.465 264.126 120.184C263.119 122.92 262.067 125.634 260.951 128.32C259.615 131.54 258.096 134.356 254.191 134.827C250.387 135.29 248.256 133.147 246.416 130.259C244.576 127.371 242.715 124.274 240.817 121.306C237.043 115.407 232.904 109.617 227.443 105.122C221.932 100.584 215.537 97.3051 209.434 93.6644C206.93 92.1662 203.163 90.5956 201.922 87.9103C200.63 85.0947 200.864 81.1573 202.71 78.6674C207.47 72.2112 217.588 76.4744 224.071 73.818C226.742 72.7251 228.903 70.5754 230.232 68.0422C231.56 65.5089 232.086 62.5993 231.998 59.7403C231.94 57.8295 231.582 55.8752 230.56 54.2539C229.1 51.9306 226.421 50.5698 223.713 50.0559C220.588 49.4697 217.187 49.7954 214.055 49.8171C210.719 49.8388 207.39 50.302 204.083 50.6494C198.411 51.243 192.644 52.4734 187.84 55.5206C182.657 58.8138 178.949 63.9889 176.27 69.4825C173.59 74.9761 171.838 80.8533 169.685 86.5785C165.027 98.9698 157.713 109.827 152.274 121.791C147.354 132.626 140.601 142.969 132.294 151.64C128.345 154.999 121.964 159.928 116.496 158.581C114.175 157.785 112.905 157.163 112.014 155.223C111.189 153.421 111.503 151.278 111.649 150.793C118.803 125.562 125.563 99.8963 133.031 74.911C137.689 63.0191 140.835 52.7557 123.14 52.9511C106.941 51.9885 105.247 59.0599 101.422 73.1811C98.5383 83.9222 95.9249 95.0758 93.2019 105.766C86.2011 133.422 71.6302 162.888 40.6267 159.667C25.4936 155.65 35.5605 136.737 37.3563 126.937C40.8238 115.154 43.5833 104.036 47.0946 92.3761C49.1532 86.4193 50.5621 80.5059 52.577 74.4767C54.3217 67.7744 58.855 60.3917 54.1465 55.3686C50.4453 53.0163 46.2405 53.5446 41.3202 53.1538C33.8303 52.9656 26.7785 54.5941 24.0628 61.7018C16.0035 90.0455 6.98063 118.042 0.636859 146.704C-1.21006 157.59 0.877763 169.561 7.98074 177.921C21.1209 193.562 44.7951 191.087 62.6146 184.985C69.8417 182.249 76.5066 175.757 84.5221 175.974C86.9677 175.923 88.7416 177.103 89.8074 178.573C100.977 194.822 125.899 190.305 139.521 179.608C146.522 173.549 152.537 173.745 157.53 178.001C174.985 192.904 216.354 192.325 242.321 180.331C244.993 179.101 248.621 178.312 250.614 181.026C254.439 187.917 265.498 186.983 272.331 185.803C281.705 183.379 282.997 174.693 285.369 165.66C288.881 154.224 291.969 142.571 295.283 131.034C298.115 120.481 300.612 109.436 307.255 100.468C313.467 92.557 325.461 80.3539 340.419 79.8038C344.325 79.5432 348.486 80.4263 351.012 83.5965C355.494 89.2421 353.735 98.1809 352.618 102.198C350.194 111.332 347.603 120.727 345.026 129.905C341.047 145.17 332.951 162.975 343.135 177.632C355.961 196.204 384.658 190.385 401.017 178.326C405.207 175.439 408.558 175.902 414.683 181.164C421.56 187.077 435.386 189.437 446.314 188.778C493.896 185.962 505.241 141.934 517.074 106.787C518.994 101.069 520.425 90.9213 522.257 87.6787C522.987 86.3831 524.965 85.3481 527.513 84.9644C529.645 84.6315 536.507 84.6026 538.565 84.6026C542.201 84.6026 547.121 84.9355 549.37 87.8017C550.611 89.0322 550.362 91.8188 549.443 93.498C546.245 99.4548 542.442 106.012 538.967 112.722C531.623 127.118 522.805 141.247 525.564 157.488C531.842 193.512 579.957 196.942 603.879 175.344C608.456 170.415 616.581 163.807 622.538 170.951C641.351 193.418 673.369 194.308 693.488 182.459C709.927 172.804 720.805 158.422 725.849 143.403C733.529 120.459 738.989 91.2832 723.491 68.8528V68.8745H723.484H723.498Z" fill="#090909"/>
+          <path d="M463.788 49.0166C456.758 54.4523 445.18 53.7574 439.208 47.5473L438.916 47.2143C432.755 41.1562 433.317 29.5104 439.887 23.5753C447.012 16.5617 459.612 16.967 466.211 23.4522C473.504 29.9446 471.986 43.4434 463.788 48.9949V49.0166Z" fill="#090909"/>
+        </svg>
+      </div>
+      <div class="preloader-gutters">
+        <div class="bar">
+          <div class="inner-bar"></div>
+        </div>
+        <div class="bar">
+          <div class="inner-bar"></div>
+        </div>
+        <div class="bar">
+          <div class="inner-bar"></div>
+        </div>
+        <div class="bar">
+          <div class="inner-bar"></div>
+        </div>
+        <div class="bar">
+          <div class="inner-bar"></div>
+        </div>
+        <div class="bar">
+          <div class="inner-bar"></div>
+        </div>
+        <div class="bar">
+          <div class="inner-bar"></div>
+        </div>
+        <div class="bar">
+          <div class="inner-bar"></div>
+        </div>
+      </div>
+      <div class="preloader-overlay"></div>
+    </div> -->
+
+    <!-- <main class="site-main"> -->
+    <main>
+      <section class="hero section-top section-hidden">
+        <div class="hero__slider">
+          <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/hero-1.png" alt="">
+                <div class="container">
+                  <div class="hero__card">
+                    <div class="hero__top">
+                      <span class="text-up text-xs text-space">INTRODUCTION</span>
+                      <h1 class="hero__title title text-up">Spring / Summer 2025</h1>
+                      <a href="" class="hero__link button-link text-xs text-up text-space">
+                        Shop now
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="hero__meta text-xs text-up text-space">Pre sale 11.06 - 24.06</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/hero-2.png" alt="">
+                <div class="container">
+                  <div class="hero__card">
+                    <div class="hero__top">
+                      <span class="text-up text-xs">INTRODUCTION</span>
+                      <h2 class="hero__title title text-up">Spring / Summer 2025</h2>
+                      <a href="" class="hero__link button-link text-xs text-up">
+                        Shop now
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="hero__meta text-xs text-up">Pre sale 11.06 - 24.06</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/hero-1.png" alt="">
+                <div class="container">
+                  <div class="hero__card">
+                    <div class="hero__top">
+                      <span class="text-up text-xs">INTRODUCTION</span>
+                      <h2 class="hero__title title text-up">Spring / Summer 2025</h2>
+                      <a href="" class="hero__link button-link text-xs text-up">
+                        Shop now
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="hero__meta text-xs text-up">Pre sale 11.06 - 24.06</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/hero-2.png" alt="">
+                <div class="container">
+                  <div class="hero__card">
+                    <div class="hero__top">
+                      <span class="text-up text-xs">INTRODUCTION</span>
+                      <h2 class="hero__title title text-up">Spring / Summer 2025</h2>
+                      <a href="" class="hero__link button-link text-xs text-up">
+                        Shop now
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="hero__meta text-xs text-up">Pre sale 11.06 - 24.06</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-next swiper-button-next">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 30L25 20L15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="hero-prev swiper-button-prev">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 30L15 20L25 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="hero-pagination"></div>
+        </div>
+      </section>
+      <section class="category section-pad section-hidden">
+        <div class="container">
+          <div class="category__container">
+            <div class="category__heading heading">
+              <div>
+                <div class="category__subtitle text-xs text-up text-space color-light">shop by category</div>
+                <h2 class="category__title title text-up">MEN | WOMEN</h2>
+              </div>
+              <a href="" class="category__link button-link text-up text-xs text-space">
+                <span>view all</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="#1B1F26" stroke-opacity="0.72" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="category__cards">
+            <a class="category__card" href="">
+              <div class="category__img"><img src="img/category-1.png" alt=""></div>
+              <div class="category__bottom">
+                <div class="category__caption color-light text-xs text-up">For Him</div>
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.41602 6.41797L15.5827 15.5846" stroke="#090909" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M15.5827 6.41797V15.5846H6.41602" stroke="#090909" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </a>
+            <a class="category__card" href="">
+              <div class="category__img"><img src="img/category-2.png" alt=""></div>
+              <div class="category__bottom">
+                <div class="category__caption color-light text-xs text-up">For Her</div>
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.41602 6.41797L15.5827 15.5846" stroke="#090909" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M15.5827 6.41797V15.5846H6.41602" stroke="#090909" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </a>
+            <a class="category__card" href="">
+              <div class="category__img"><img src="img/category-3.png" alt=""></div>
+              <div class="category__bottom">
+                <div class="category__caption color-light text-xs text-up">New arrivals</div>
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.41602 6.41797L15.5827 15.5846" stroke="#090909" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M15.5827 6.41797V15.5846H6.41602" stroke="#090909" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="catalog section-pad section-hidden">
+        <div class="container">
+          <div class="catalog__container">
+            <div class="catalog__heading heading">
+              <div>
+                <div class="catalog__subtitle text-xs text-up text-space color-light">enjoy</div>
+                <h2 class="catalog__title title text-up">SPRING SUMMER 2025</h2>
+              </div>
+              <a href="" class="catalog__link button-link text-up text-xs text-space">
+                <span>view all</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="#1B1F26" stroke-opacity="0.72" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+            <div class="catalog__cards">
+              <a class="catalog__card" href="">
+                <div class="catalog__top">
+                  <img src="img/product-1.png" alt="">
+                  <div class="catalog__group">
+                    <div class="catalog__sale text-xs">-50%</div>
+                    <div class="catalog__favorites active">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.49316 4.89258C7.8425 4.61708 9.26045 4.9635 10.3193 5.85352L10.3311 5.86328L10.3438 5.87305C10.6809 6.13481 11.0462 6.55292 11.3828 6.96094L12 7.70898L12.6172 6.96094C13.0106 6.48397 13.2367 6.14804 13.6016 5.91211L13.6309 5.89355L13.6582 5.87305C14.7229 5.04703 16.1602 4.6903 17.5342 4.89746C19.6375 5.31557 21.2 7.23564 21.2002 9.44238C21.2002 10.5975 20.7057 11.7651 19.8594 12.5859L12.0264 20.1826C12.0184 20.1904 12.0108 20.195 12.0059 20.1992C12.0041 20.1993 12.0021 20.2002 12 20.2002C11.9975 20.2002 11.9952 20.1993 11.9932 20.1992C11.9883 20.195 11.9813 20.1901 11.9736 20.1826L4.14062 12.5859L4.13867 12.583L3.98145 12.4248C3.62651 12.0476 3.34312 11.6134 3.14258 11.1426C2.91317 10.6039 2.79601 10.0272 2.7998 9.44727V9.44238C2.79995 7.22876 4.37305 5.30353 6.48633 4.89355L6.49316 4.89258Z" stroke="#090909" stroke-width="1.6"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__bottom text-xs">
+                  <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                  <div class="catalog__price">
+                    <div class="price">₸39,100</div>
+                    <div class="old-price">₸39,100</div>
+                  </div>
+                </div>
+              </a>
+              <a class="catalog__card" href="">
+                <div class="catalog__top">
+                  <img src="img/product-2.png" alt="">
+                  <div class="catalog__group">
+                    <div class="catalog__sale text-xs">-50%</div>
+                    <div class="catalog__favorites">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.49316 4.89258C7.8425 4.61708 9.26045 4.9635 10.3193 5.85352L10.3311 5.86328L10.3438 5.87305C10.6809 6.13481 11.0462 6.55292 11.3828 6.96094L12 7.70898L12.6172 6.96094C13.0106 6.48397 13.2367 6.14804 13.6016 5.91211L13.6309 5.89355L13.6582 5.87305C14.7229 5.04703 16.1602 4.6903 17.5342 4.89746C19.6375 5.31557 21.2 7.23564 21.2002 9.44238C21.2002 10.5975 20.7057 11.7651 19.8594 12.5859L12.0264 20.1826C12.0184 20.1904 12.0108 20.195 12.0059 20.1992C12.0041 20.1993 12.0021 20.2002 12 20.2002C11.9975 20.2002 11.9952 20.1993 11.9932 20.1992C11.9883 20.195 11.9813 20.1901 11.9736 20.1826L4.14062 12.5859L4.13867 12.583L3.98145 12.4248C3.62651 12.0476 3.34312 11.6134 3.14258 11.1426C2.91317 10.6039 2.79601 10.0272 2.7998 9.44727V9.44238C2.79995 7.22876 4.37305 5.30353 6.48633 4.89355L6.49316 4.89258Z" stroke="#090909" stroke-width="1.6"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__bottom text-xs">
+                  <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                  <div class="catalog__price">
+                    <div class="price">₸39,100</div>
+                    <div class="old-price">₸39,100</div>
+                  </div>
+                </div>
+              </a>
+              <a class="catalog__card" href="">
+                <div class="catalog__top">
+                  <img src="img/product-3.png" alt="">
+                  <div class="catalog__group">
+                    <div class="catalog__sale text-xs">-50%</div>
+                    <div class="catalog__favorites">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.49316 4.89258C7.8425 4.61708 9.26045 4.9635 10.3193 5.85352L10.3311 5.86328L10.3438 5.87305C10.6809 6.13481 11.0462 6.55292 11.3828 6.96094L12 7.70898L12.6172 6.96094C13.0106 6.48397 13.2367 6.14804 13.6016 5.91211L13.6309 5.89355L13.6582 5.87305C14.7229 5.04703 16.1602 4.6903 17.5342 4.89746C19.6375 5.31557 21.2 7.23564 21.2002 9.44238C21.2002 10.5975 20.7057 11.7651 19.8594 12.5859L12.0264 20.1826C12.0184 20.1904 12.0108 20.195 12.0059 20.1992C12.0041 20.1993 12.0021 20.2002 12 20.2002C11.9975 20.2002 11.9952 20.1993 11.9932 20.1992C11.9883 20.195 11.9813 20.1901 11.9736 20.1826L4.14062 12.5859L4.13867 12.583L3.98145 12.4248C3.62651 12.0476 3.34312 11.6134 3.14258 11.1426C2.91317 10.6039 2.79601 10.0272 2.7998 9.44727V9.44238C2.79995 7.22876 4.37305 5.30353 6.48633 4.89355L6.49316 4.89258Z" stroke="#090909" stroke-width="1.6"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__bottom text-xs">
+                  <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                  <div class="catalog__price">
+                    <div class="price">₸39,100</div>
+                    <div class="old-price">₸39,100</div>
+                  </div>
+                </div>
+              </a>
+              <a class="catalog__card" href="">
+                <div class="catalog__top">
+                  <img src="img/product-4.png" alt="">
+                  <div class="catalog__group">
+                    <div class="catalog__sale text-xs">-50%</div>
+                    <div class="catalog__favorites">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.49316 4.89258C7.8425 4.61708 9.26045 4.9635 10.3193 5.85352L10.3311 5.86328L10.3438 5.87305C10.6809 6.13481 11.0462 6.55292 11.3828 6.96094L12 7.70898L12.6172 6.96094C13.0106 6.48397 13.2367 6.14804 13.6016 5.91211L13.6309 5.89355L13.6582 5.87305C14.7229 5.04703 16.1602 4.6903 17.5342 4.89746C19.6375 5.31557 21.2 7.23564 21.2002 9.44238C21.2002 10.5975 20.7057 11.7651 19.8594 12.5859L12.0264 20.1826C12.0184 20.1904 12.0108 20.195 12.0059 20.1992C12.0041 20.1993 12.0021 20.2002 12 20.2002C11.9975 20.2002 11.9952 20.1993 11.9932 20.1992C11.9883 20.195 11.9813 20.1901 11.9736 20.1826L4.14062 12.5859L4.13867 12.583L3.98145 12.4248C3.62651 12.0476 3.34312 11.6134 3.14258 11.1426C2.91317 10.6039 2.79601 10.0272 2.7998 9.44727V9.44238C2.79995 7.22876 4.37305 5.30353 6.48633 4.89355L6.49316 4.89258Z" stroke="#090909" stroke-width="1.6"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__bottom text-xs">
+                  <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                  <div class="catalog__price">
+                    <div class="price">₸39,100</div>
+                    <div class="old-price">₸39,100</div>
+                  </div>
+                </div>
+              </a>
+              <a class="catalog__card" href="">
+                <div class="catalog__top">
+                  <img src="img/product-5.png" alt="">
+                  <div class="catalog__group">
+                    <div class="catalog__sale text-xs">-50%</div>
+                    <div class="catalog__favorites">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.49316 4.89258C7.8425 4.61708 9.26045 4.9635 10.3193 5.85352L10.3311 5.86328L10.3438 5.87305C10.6809 6.13481 11.0462 6.55292 11.3828 6.96094L12 7.70898L12.6172 6.96094C13.0106 6.48397 13.2367 6.14804 13.6016 5.91211L13.6309 5.89355L13.6582 5.87305C14.7229 5.04703 16.1602 4.6903 17.5342 4.89746C19.6375 5.31557 21.2 7.23564 21.2002 9.44238C21.2002 10.5975 20.7057 11.7651 19.8594 12.5859L12.0264 20.1826C12.0184 20.1904 12.0108 20.195 12.0059 20.1992C12.0041 20.1993 12.0021 20.2002 12 20.2002C11.9975 20.2002 11.9952 20.1993 11.9932 20.1992C11.9883 20.195 11.9813 20.1901 11.9736 20.1826L4.14062 12.5859L4.13867 12.583L3.98145 12.4248C3.62651 12.0476 3.34312 11.6134 3.14258 11.1426C2.91317 10.6039 2.79601 10.0272 2.7998 9.44727V9.44238C2.79995 7.22876 4.37305 5.30353 6.48633 4.89355L6.49316 4.89258Z" stroke="#090909" stroke-width="1.6"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__bottom text-xs">
+                  <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                  <div class="catalog__price">
+                    <div class="price">₸39,100</div>
+                    <div class="old-price">₸39,100</div>
+                  </div>
+                </div>
+              </a>
+              <a class="catalog__card" href="">
+                <div class="catalog__top">
+                  <img src="img/product-6.png" alt="">
+                  <div class="catalog__group">
+                    <div class="catalog__sale text-xs">-50%</div>
+                    <div class="catalog__favorites">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.49316 4.89258C7.8425 4.61708 9.26045 4.9635 10.3193 5.85352L10.3311 5.86328L10.3438 5.87305C10.6809 6.13481 11.0462 6.55292 11.3828 6.96094L12 7.70898L12.6172 6.96094C13.0106 6.48397 13.2367 6.14804 13.6016 5.91211L13.6309 5.89355L13.6582 5.87305C14.7229 5.04703 16.1602 4.6903 17.5342 4.89746C19.6375 5.31557 21.2 7.23564 21.2002 9.44238C21.2002 10.5975 20.7057 11.7651 19.8594 12.5859L12.0264 20.1826C12.0184 20.1904 12.0108 20.195 12.0059 20.1992C12.0041 20.1993 12.0021 20.2002 12 20.2002C11.9975 20.2002 11.9952 20.1993 11.9932 20.1992C11.9883 20.195 11.9813 20.1901 11.9736 20.1826L4.14062 12.5859L4.13867 12.583L3.98145 12.4248C3.62651 12.0476 3.34312 11.6134 3.14258 11.1426C2.91317 10.6039 2.79601 10.0272 2.7998 9.44727V9.44238C2.79995 7.22876 4.37305 5.30353 6.48633 4.89355L6.49316 4.89258Z" stroke="#090909" stroke-width="1.6"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__bottom text-xs">
+                  <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                  <div class="catalog__price">
+                    <div class="price">₸39,100</div>
+                    <div class="old-price">₸39,100</div>
+                  </div>
+                </div>
+              </a>
+              <a class="catalog__card" href="">
+                <div class="catalog__top">
+                  <img src="img/product-7.png" alt="">
+                  <div class="catalog__group">
+                    <div class="catalog__sale text-xs">-50%</div>
+                    <div class="catalog__favorites">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.49316 4.89258C7.8425 4.61708 9.26045 4.9635 10.3193 5.85352L10.3311 5.86328L10.3438 5.87305C10.6809 6.13481 11.0462 6.55292 11.3828 6.96094L12 7.70898L12.6172 6.96094C13.0106 6.48397 13.2367 6.14804 13.6016 5.91211L13.6309 5.89355L13.6582 5.87305C14.7229 5.04703 16.1602 4.6903 17.5342 4.89746C19.6375 5.31557 21.2 7.23564 21.2002 9.44238C21.2002 10.5975 20.7057 11.7651 19.8594 12.5859L12.0264 20.1826C12.0184 20.1904 12.0108 20.195 12.0059 20.1992C12.0041 20.1993 12.0021 20.2002 12 20.2002C11.9975 20.2002 11.9952 20.1993 11.9932 20.1992C11.9883 20.195 11.9813 20.1901 11.9736 20.1826L4.14062 12.5859L4.13867 12.583L3.98145 12.4248C3.62651 12.0476 3.34312 11.6134 3.14258 11.1426C2.91317 10.6039 2.79601 10.0272 2.7998 9.44727V9.44238C2.79995 7.22876 4.37305 5.30353 6.48633 4.89355L6.49316 4.89258Z" stroke="#090909" stroke-width="1.6"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__bottom text-xs">
+                  <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                  <div class="catalog__price">
+                    <div class="price">₸39,100</div>
+                    <div class="old-price">₸39,100</div>
+                  </div>
+                </div>
+              </a>
+              <a class="catalog__card" href="">
+                <div class="catalog__top">
+                  <img src="img/product-8.png" alt="">
+                  <div class="catalog__group">
+                    <div class="catalog__sale text-xs">-50%</div>
+                    <div class="catalog__favorites">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.49316 4.89258C7.8425 4.61708 9.26045 4.9635 10.3193 5.85352L10.3311 5.86328L10.3438 5.87305C10.6809 6.13481 11.0462 6.55292 11.3828 6.96094L12 7.70898L12.6172 6.96094C13.0106 6.48397 13.2367 6.14804 13.6016 5.91211L13.6309 5.89355L13.6582 5.87305C14.7229 5.04703 16.1602 4.6903 17.5342 4.89746C19.6375 5.31557 21.2 7.23564 21.2002 9.44238C21.2002 10.5975 20.7057 11.7651 19.8594 12.5859L12.0264 20.1826C12.0184 20.1904 12.0108 20.195 12.0059 20.1992C12.0041 20.1993 12.0021 20.2002 12 20.2002C11.9975 20.2002 11.9952 20.1993 11.9932 20.1992C11.9883 20.195 11.9813 20.1901 11.9736 20.1826L4.14062 12.5859L4.13867 12.583L3.98145 12.4248C3.62651 12.0476 3.34312 11.6134 3.14258 11.1426C2.91317 10.6039 2.79601 10.0272 2.7998 9.44727V9.44238C2.79995 7.22876 4.37305 5.30353 6.48633 4.89355L6.49316 4.89258Z" stroke="#090909" stroke-width="1.6"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__bottom text-xs">
+                  <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                  <div class="catalog__price">
+                    <div class="price">₸39,100</div>
+                    <div class="old-price">₸39,100</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="shop">
+        <div class="shop__container">
+          <div class="shop__img"><img src="img/img-1.png" alt=""></div>
+          <div class="shop__wrap">
+            <h2 class="shop__title title">Shop the looks</h2>
+            <div class="shop__slider">
+              <div class="swiper shopSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a class="catalog__card" href="">
+                      <div class="catalog__top">
+                        <img src="img/product-5.png" alt="">
+                        <div class="catalog__group">
+                          <div class="catalog__sale text-xs">-50%</div>
+                          <div class="catalog__favorites">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0001 21C11.7501 21 11.5834 20.9192 11.4167 20.7575L3.58343 13.1605C3.07766 12.6742 2.67708 12.0949 2.4052 11.4565C2.13331 10.8181 1.99559 10.1335 2.00011 9.44277C2.00011 6.85654 3.83343 4.59358 6.33342 4.10866C7.91674 3.78538 9.5834 4.18948 10.8334 5.24014C11.2501 5.56342 11.6667 6.04834 12.0001 6.45244C12.3334 6.04834 12.6667 5.56342 13.1667 5.24014C14.4167 4.2703 16.0834 3.8662 17.6667 4.10866C20.1667 4.59358 22 6.85654 22 9.44277C22 10.8167 21.4167 12.1906 20.4167 13.1605L12.5834 20.7575C12.4167 20.9192 12.2501 21 12.0001 21ZM7.41675 5.64424C7.16675 5.64424 6.91675 5.64424 6.66675 5.72506C4.91676 6.04834 3.66677 7.58391 3.66677 9.44277C3.66677 10.4126 4.08343 11.3016 4.75009 12.029L12.0001 19.0603L19.25 12.029C19.9167 11.3824 20.3333 10.4126 20.3333 9.44277C20.3333 7.58391 19.0833 6.04834 17.3334 5.72506C16.1667 5.4826 15.0834 5.80588 14.1667 6.45244C13.3334 7.17982 12.8334 8.14965 12.8334 9.28113C12.8334 9.76605 12.5001 10.0893 12.0001 10.0893C11.5001 10.0893 11.1667 9.76605 11.1667 9.28113C11.1667 8.23047 10.6667 7.17982 9.8334 6.45244C9.0834 5.8867 8.33341 5.64424 7.41675 5.64424Z" fill="#090909"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="catalog__bottom text-xs">
+                        <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                        <div class="catalog__price">
+                          <div class="price">₸39,100</div>
+                          <div class="old-price">₸39,100</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="catalog__card" href="">
+                      <div class="catalog__top">
+                        <img src="img/product-8.png" alt="">
+                        <div class="catalog__group">
+                          <div class="catalog__sale text-xs">-50%</div>
+                          <div class="catalog__favorites">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0001 21C11.7501 21 11.5834 20.9192 11.4167 20.7575L3.58343 13.1605C3.07766 12.6742 2.67708 12.0949 2.4052 11.4565C2.13331 10.8181 1.99559 10.1335 2.00011 9.44277C2.00011 6.85654 3.83343 4.59358 6.33342 4.10866C7.91674 3.78538 9.5834 4.18948 10.8334 5.24014C11.2501 5.56342 11.6667 6.04834 12.0001 6.45244C12.3334 6.04834 12.6667 5.56342 13.1667 5.24014C14.4167 4.2703 16.0834 3.8662 17.6667 4.10866C20.1667 4.59358 22 6.85654 22 9.44277C22 10.8167 21.4167 12.1906 20.4167 13.1605L12.5834 20.7575C12.4167 20.9192 12.2501 21 12.0001 21ZM7.41675 5.64424C7.16675 5.64424 6.91675 5.64424 6.66675 5.72506C4.91676 6.04834 3.66677 7.58391 3.66677 9.44277C3.66677 10.4126 4.08343 11.3016 4.75009 12.029L12.0001 19.0603L19.25 12.029C19.9167 11.3824 20.3333 10.4126 20.3333 9.44277C20.3333 7.58391 19.0833 6.04834 17.3334 5.72506C16.1667 5.4826 15.0834 5.80588 14.1667 6.45244C13.3334 7.17982 12.8334 8.14965 12.8334 9.28113C12.8334 9.76605 12.5001 10.0893 12.0001 10.0893C11.5001 10.0893 11.1667 9.76605 11.1667 9.28113C11.1667 8.23047 10.6667 7.17982 9.8334 6.45244C9.0834 5.8867 8.33341 5.64424 7.41675 5.64424Z" fill="#090909"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="catalog__bottom text-xs">
+                        <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                        <div class="catalog__price">
+                          <div class="price">₸39,100</div>
+                          <div class="old-price">₸39,100</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="catalog__card" href="">
+                      <div class="catalog__top">
+                        <img src="img/product-4.png" alt="">
+                        <div class="catalog__group">
+                          <div class="catalog__sale text-xs">-50%</div>
+                          <div class="catalog__favorites">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0001 21C11.7501 21 11.5834 20.9192 11.4167 20.7575L3.58343 13.1605C3.07766 12.6742 2.67708 12.0949 2.4052 11.4565C2.13331 10.8181 1.99559 10.1335 2.00011 9.44277C2.00011 6.85654 3.83343 4.59358 6.33342 4.10866C7.91674 3.78538 9.5834 4.18948 10.8334 5.24014C11.2501 5.56342 11.6667 6.04834 12.0001 6.45244C12.3334 6.04834 12.6667 5.56342 13.1667 5.24014C14.4167 4.2703 16.0834 3.8662 17.6667 4.10866C20.1667 4.59358 22 6.85654 22 9.44277C22 10.8167 21.4167 12.1906 20.4167 13.1605L12.5834 20.7575C12.4167 20.9192 12.2501 21 12.0001 21ZM7.41675 5.64424C7.16675 5.64424 6.91675 5.64424 6.66675 5.72506C4.91676 6.04834 3.66677 7.58391 3.66677 9.44277C3.66677 10.4126 4.08343 11.3016 4.75009 12.029L12.0001 19.0603L19.25 12.029C19.9167 11.3824 20.3333 10.4126 20.3333 9.44277C20.3333 7.58391 19.0833 6.04834 17.3334 5.72506C16.1667 5.4826 15.0834 5.80588 14.1667 6.45244C13.3334 7.17982 12.8334 8.14965 12.8334 9.28113C12.8334 9.76605 12.5001 10.0893 12.0001 10.0893C11.5001 10.0893 11.1667 9.76605 11.1667 9.28113C11.1667 8.23047 10.6667 7.17982 9.8334 6.45244C9.0834 5.8867 8.33341 5.64424 7.41675 5.64424Z" fill="#090909"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="catalog__bottom text-xs">
+                        <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                        <div class="catalog__price">
+                          <div class="price">₸39,100</div>
+                          <div class="old-price">₸39,100</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="catalog__card" href="">
+                      <div class="catalog__top">
+                        <img src="img/product-1.png" alt="">
+                        <div class="catalog__group">
+                          <div class="catalog__sale text-xs">-50%</div>
+                          <div class="catalog__favorites active">
+                            <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0001 21C11.7501 21 11.5834 20.9192 11.4167 20.7575L3.58343 13.1605C3.07766 12.6742 2.67708 12.0949 2.4052 11.4565C2.13331 10.8181 1.99559 10.1335 2.00011 9.44277C2.00011 6.85654 3.83343 4.59358 6.33342 4.10866C7.91674 3.78538 9.5834 4.18948 10.8334 5.24014C11.2501 5.56342 11.6667 6.04834 12.0001 6.45244C12.3334 6.04834 12.6667 5.56342 13.1667 5.24014C14.4167 4.2703 16.0834 3.8662 17.6667 4.10866C20.1667 4.59358 22 6.85654 22 9.44277C22 10.8167 21.4167 12.1906 20.4167 13.1605L12.5834 20.7575C12.4167 20.9192 12.2501 21 12.0001 21ZM7.41675 5.64424C7.16675 5.64424 6.91675 5.64424 6.66675 5.72506C4.91676 6.04834 3.66677 7.58391 3.66677 9.44277C3.66677 10.4126 4.08343 11.3016 4.75009 12.029L12.0001 19.0603L19.25 12.029C19.9167 11.3824 20.3333 10.4126 20.3333 9.44277C20.3333 7.58391 19.0833 6.04834 17.3334 5.72506C16.1667 5.4826 15.0834 5.80588 14.1667 6.45244C13.3334 7.17982 12.8334 8.14965 12.8334 9.28113C12.8334 9.76605 12.5001 10.0893 12.0001 10.0893C11.5001 10.0893 11.1667 9.76605 11.1667 9.28113C11.1667 8.23047 10.6667 7.17982 9.8334 6.45244C9.0834 5.8867 8.33341 5.64424 7.41675 5.64424Z" fill="#090909"/>
+                            </svg> -->
+                            <!-- вывести если active -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.33359 4.10858C7.91689 3.78531 9.58385 4.19 10.8338 5.24064C11.2502 5.56381 11.6669 6.04813 12.0001 6.45205C12.3334 6.04798 12.6674 5.56388 13.1673 5.24064C14.4172 4.2709 16.0833 3.86625 17.6665 4.10858C20.1664 4.59347 21.9999 6.85634 22 9.4424C22 10.8163 21.4164 12.1902 20.4164 13.16L12.5832 20.7569C12.4165 20.9185 12.25 21 12.0001 21C11.7502 20.9999 11.5835 20.9185 11.4169 20.7569L3.58373 13.16C3.07812 12.6738 2.67795 12.0946 2.40611 11.4564C2.13423 10.818 1.99559 10.1331 2.00011 9.4424C2.00025 6.8564 3.83382 4.59354 6.33359 4.10858Z" fill="#090909"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="catalog__bottom text-xs">
+                        <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                        <div class="catalog__price">
+                          <div class="price">₸39,100</div>
+                          <div class="old-price">₸39,100</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="catalog__card" href="">
+                      <div class="catalog__top">
+                        <img src="img/product-2.png" alt="">
+                        <div class="catalog__group">
+                          <div class="catalog__sale text-xs">-50%</div>
+                          <div class="catalog__favorites">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0001 21C11.7501 21 11.5834 20.9192 11.4167 20.7575L3.58343 13.1605C3.07766 12.6742 2.67708 12.0949 2.4052 11.4565C2.13331 10.8181 1.99559 10.1335 2.00011 9.44277C2.00011 6.85654 3.83343 4.59358 6.33342 4.10866C7.91674 3.78538 9.5834 4.18948 10.8334 5.24014C11.2501 5.56342 11.6667 6.04834 12.0001 6.45244C12.3334 6.04834 12.6667 5.56342 13.1667 5.24014C14.4167 4.2703 16.0834 3.8662 17.6667 4.10866C20.1667 4.59358 22 6.85654 22 9.44277C22 10.8167 21.4167 12.1906 20.4167 13.1605L12.5834 20.7575C12.4167 20.9192 12.2501 21 12.0001 21ZM7.41675 5.64424C7.16675 5.64424 6.91675 5.64424 6.66675 5.72506C4.91676 6.04834 3.66677 7.58391 3.66677 9.44277C3.66677 10.4126 4.08343 11.3016 4.75009 12.029L12.0001 19.0603L19.25 12.029C19.9167 11.3824 20.3333 10.4126 20.3333 9.44277C20.3333 7.58391 19.0833 6.04834 17.3334 5.72506C16.1667 5.4826 15.0834 5.80588 14.1667 6.45244C13.3334 7.17982 12.8334 8.14965 12.8334 9.28113C12.8334 9.76605 12.5001 10.0893 12.0001 10.0893C11.5001 10.0893 11.1667 9.76605 11.1667 9.28113C11.1667 8.23047 10.6667 7.17982 9.8334 6.45244C9.0834 5.8867 8.33341 5.64424 7.41675 5.64424Z" fill="#090909"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="catalog__bottom text-xs">
+                        <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                        <div class="catalog__price">
+                          <div class="price">₸39,100</div>
+                          <div class="old-price">₸39,100</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="catalog__card" href="">
+                      <div class="catalog__top">
+                        <img src="img/product-3.png" alt="">
+                        <div class="catalog__group">
+                          <div class="catalog__sale text-xs">-50%</div>
+                          <div class="catalog__favorites">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0001 21C11.7501 21 11.5834 20.9192 11.4167 20.7575L3.58343 13.1605C3.07766 12.6742 2.67708 12.0949 2.4052 11.4565C2.13331 10.8181 1.99559 10.1335 2.00011 9.44277C2.00011 6.85654 3.83343 4.59358 6.33342 4.10866C7.91674 3.78538 9.5834 4.18948 10.8334 5.24014C11.2501 5.56342 11.6667 6.04834 12.0001 6.45244C12.3334 6.04834 12.6667 5.56342 13.1667 5.24014C14.4167 4.2703 16.0834 3.8662 17.6667 4.10866C20.1667 4.59358 22 6.85654 22 9.44277C22 10.8167 21.4167 12.1906 20.4167 13.1605L12.5834 20.7575C12.4167 20.9192 12.2501 21 12.0001 21ZM7.41675 5.64424C7.16675 5.64424 6.91675 5.64424 6.66675 5.72506C4.91676 6.04834 3.66677 7.58391 3.66677 9.44277C3.66677 10.4126 4.08343 11.3016 4.75009 12.029L12.0001 19.0603L19.25 12.029C19.9167 11.3824 20.3333 10.4126 20.3333 9.44277C20.3333 7.58391 19.0833 6.04834 17.3334 5.72506C16.1667 5.4826 15.0834 5.80588 14.1667 6.45244C13.3334 7.17982 12.8334 8.14965 12.8334 9.28113C12.8334 9.76605 12.5001 10.0893 12.0001 10.0893C11.5001 10.0893 11.1667 9.76605 11.1667 9.28113C11.1667 8.23047 10.6667 7.17982 9.8334 6.45244C9.0834 5.8867 8.33341 5.64424 7.41675 5.64424Z" fill="#090909"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="catalog__bottom text-xs">
+                        <div class="catalog__caption">Yankees Chainstitch Pocket Tee</div>
+                        <div class="catalog__price">
+                          <div class="price">₸39,100</div>
+                          <div class="old-price">₸39,100</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="shop-next swiper-button-next">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 24L20 16L12 8" stroke="#090909" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="shop-prev swiper-button-prev">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 24L12 16L20 8" stroke="#090909" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="shop-pagination"></div>
+            </div>
+            <a href="" class="shop__link button-link text-up text-xs text-space">
+              View all looks
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="#1B1F26" stroke-opacity="0.72" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="news section-pad section-hidden">
+        <div class="container">
+          <div class="news__container">
+            <div class="news__heading heading">
+              <div>
+                <h2 class="news__title title">Newsstand</h2>
+              </div>
+              <a href="" class="news__link button-link text-up text-xs text-space">
+                <span>view all</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="#1B1F26" stroke-opacity="0.72" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+            <div class="news__cards">
+              <a class="news__card news-card" href="">
+                <div class="news-card__img"><img src="img/news-1.png" alt=""></div>
+                <div class="news-card__content">
+                  <div class="news-card__top text-xs text-up color-light">
+                    <span>EVENTS</span>
+                    <span>JUN 28, 2025</span>
+                  </div>
+                  <div class="news-card__caption">Open Showroom: Paris Fashion Week SS26</div>
+                </div>
+                <div class="news-card__bottom text-xs text-up color-light">
+                  Read more
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.41602 6.41797L15.5827 15.5846" stroke="#090909" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.5827 6.41797V15.5846H6.41602" stroke="#090909" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </a>
+              <a class="news__card news-card" href="">
+                <div class="news-card__img"><img src="img/news-2.png" alt=""></div>
+                <div class="news-card__content">
+                  <div class="news-card__top text-up text-xs color-light">
+                    <span>EVENTS</span>
+                    <span>JUN 28, 2025</span>
+                  </div>
+                  <div class="news-card__caption">New Arrivals: UGG® x REESE COOPER®</div>
+                </div>
+                <div class="news-card__bottom text-xs text-up color-light">
+                  Read more
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.41602 6.41797L15.5827 15.5846" stroke="#090909" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.5827 6.41797V15.5846H6.41602" stroke="#090909" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </a>
+              <a class="news__card news-card" href="">
+                <div class="news-card__img"><img src="img/news-3.png" alt=""></div>
+                <div class="news-card__content">
+                  <div class="news-card__top text-up text-xs color-light">
+                    <span>EVENTS</span>
+                    <span>JUN 28, 2025</span>
+                  </div>
+                  <div class="news-card__caption">Open Showroom: Paris Fashion Week SS26</div>
+                </div>
+                <div class="news-card__bottom text-xs text-up color-light">
+                  Read more
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.41602 6.41797L15.5827 15.5846" stroke="#090909" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.5827 6.41797V15.5846H6.41602" stroke="#090909" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq section-pad-bottom section-hidden">
+        <div class="container">
+          <div class="faq__container">
+            <div class="faq__heading heading">
+              <div>
+                <h2 class="faq__title title text-up">FAQ</h2>
+              </div>
+            </div>
+            <div class="faq__accordion accordion">
+              <div class="accordion__item">
+                <div class="accordion__head">
+                  <div class="accordion__caption title-s">Как выбрать размер?</div>
+                  <div class="accordion__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__content color-grey"><p>Бонусы за покупки и рекомендации. Постоянным клиентам — ранний доступ к дропам и закрытым сейлам.</p></div>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__head">
+                  <div class="accordion__caption title-s">Доставка по Казахстану</div>
+                  <div class="accordion__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__content color-grey"><p>Бонусы за покупки и рекомендации. Постоянным клиентам — ранний доступ к дропам и закрытым сейлам.</p></div>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__head">
+                  <div class="accordion__caption title-s">Можно ли с примеркой?</div>
+                  <div class="accordion__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__content color-grey"><p>Бонусы за покупки и рекомендации. Постоянным клиентам — ранний доступ к дропам и закрытым сейлам.</p></div>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__head">
+                  <div class="accordion__caption title-s">Будут ли рестоки?</div>
+                  <div class="accordion__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__content color-grey"><p>Бонусы за покупки и рекомендации. Постоянным клиентам — ранний доступ к дропам и закрытым сейлам.</p></div>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__head">
+                  <div class="accordion__caption title-s">Программа лояльности</div>
+                  <div class="accordion__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__content color-grey">
+                    <p>Бонусы за покупки и рекомендации. Постоянным клиентам — ранний доступ к дропам и закрытым сейлам.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modals">
+  <div class="modal" data-type="welcome">
+    <div class="modal__container">
+      <button class="modal__close">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2511 12.2511C12.5858 11.9163 13.1285 11.9163 13.4632 12.2511L20 18.7878L26.5368 12.2511C26.8715 11.9163 27.4142 11.9163 27.7489 12.2511C28.0837 12.5858 28.0837 13.1285 27.7489 13.4632L21.2122 20L27.7489 26.5368C28.0837 26.8715 28.0837 27.4142 27.7489 27.7489C27.4142 28.0837 26.8715 28.0837 26.5368 27.7489L20 21.2122L13.4632 27.7489C13.1285 28.0837 12.5858 28.0837 12.2511 27.7489C11.9163 27.4142 11.9163 26.8715 12.2511 26.5368L18.7878 20L12.2511 13.4632C11.9163 13.1285 11.9163 12.5858 12.2511 12.2511Z" fill="#606266"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="modal" data-type="login">
+    <div class="modal__container">
+      <button class="modal__close">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2511 12.2511C12.5858 11.9163 13.1285 11.9163 13.4632 12.2511L20 18.7878L26.5368 12.2511C26.8715 11.9163 27.4142 11.9163 27.7489 12.2511C28.0837 12.5858 28.0837 13.1285 27.7489 13.4632L21.2122 20L27.7489 26.5368C28.0837 26.8715 28.0837 27.4142 27.7489 27.7489C27.4142 28.0837 26.8715 28.0837 26.5368 27.7489L20 21.2122L13.4632 27.7489C13.1285 28.0837 12.5858 28.0837 12.2511 27.7489C11.9163 27.4142 11.9163 26.8715 12.2511 26.5368L18.7878 20L12.2511 13.4632C11.9163 13.1285 11.9163 12.5858 12.2511 12.2511Z" fill="#606266"/>
+        </svg>
+      </button>
+      <div class="modal__content">
+        <div class="modal__top">
+          <h2 class="modal__title title">Login to your account</h2>
+          <div class="modal__desc">Don't have an account yet? <a href="">Register</a></div>
+        </div>
+        <form action="" id="loginForm" class="modal__form form-login">
+          <div class="form__fieldset">
+            <div class="form__field">
+              <input type="text" name="first-name" data-placeholder="Email address" required>
+              <span class="form-error text-xs">Incorrect email</span>
+            </div>
+            <div class="form__field">
+              <input type="password" name="first-name" data-placeholder="Enter password" required>
+              <span class="form-error text-xs">Incorrect password</span>
+            </div>
+          </div>
+          <div class="form__link">Forgot your password? <a href="" class="modal-btn" data-type="reset">Reset</a></div>
+          <button class="modal__button form__button button button-dark" disabled>Login in</button>
+        </form>
+        <div class="modal__line">
+          <span></span>
+          or continue with
+          <span></span>
+        </div>
+        <div class="modal__socials">
+          <a href="" class="modal__social">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_2334_18957)">
+              <path d="M5.31891 14.5027L4.4835 17.6213L1.43011 17.6859C0.517594 15.9934 0 14.057 0 11.9992C0 10.0093 0.483938 8.13277 1.34175 6.48047H1.34241L4.06078 6.97884L5.25159 9.68091C5.00236 10.4075 4.86652 11.1875 4.86652 11.9992C4.86661 12.88 5.02617 13.724 5.31891 14.5027Z" fill="#FBBB00"/>
+              <path d="M23.7882 9.75781C23.926 10.4837 23.9979 11.2334 23.9979 11.9996C23.9979 12.8587 23.9076 13.6967 23.7355 14.5051C23.1513 17.2558 21.625 19.6578 19.5105 21.3576L19.5098 21.3569L16.0859 21.1822L15.6013 18.1572C17.0043 17.3343 18.1008 16.0466 18.6784 14.5051H12.2617V9.75781H23.7882Z" fill="#518EF8"/>
+              <path d="M19.5114 21.3577L19.5121 21.3584C17.4556 23.0113 14.8433 24.0004 11.9996 24.0004C7.42969 24.0004 3.45652 21.4461 1.42969 17.6872L5.31848 14.5039C6.33187 17.2085 8.94089 19.1338 11.9996 19.1338C13.3143 19.1338 14.546 18.7784 15.6029 18.158L19.5114 21.3577Z" fill="#28B446"/>
+              <path d="M19.6577 2.76262L15.7702 5.94525C14.6763 5.26153 13.3833 4.86656 11.9981 4.86656C8.87017 4.86656 6.21236 6.88017 5.24973 9.68175L1.3405 6.48131H1.33984C3.337 2.63077 7.36028 0 11.9981 0C14.9097 0 17.5794 1.03716 19.6577 2.76262Z" fill="#F14336"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_2334_18957">
+              <rect width="24" height="24" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>
+            <span>Google</span>
+          </a>
+          <a href="" class="modal__social">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_2334_18965)">
+              <path d="M21.6845 18.7033C21.3216 19.5418 20.892 20.3136 20.3942 21.0232C19.7157 21.9906 19.1602 22.6602 18.732 23.0321C18.0684 23.6424 17.3573 23.955 16.5958 23.9728C16.0492 23.9728 15.3899 23.8172 14.6225 23.5017C13.8526 23.1876 13.1451 23.0321 12.4982 23.0321C11.8197 23.0321 11.092 23.1876 10.3136 23.5017C9.53411 23.8172 8.90613 23.9817 8.426 23.9979C7.6958 24.0291 6.96797 23.7076 6.24148 23.0321C5.77779 22.6276 5.19781 21.9343 4.50301 20.9521C3.75756 19.9033 3.14469 18.687 2.66455 17.3004C2.15035 15.8026 1.89258 14.3523 1.89258 12.9482C1.89258 11.3398 2.24012 9.95259 2.93625 8.79011C3.48334 7.85636 4.21117 7.11979 5.1221 6.57906C6.03304 6.03834 7.0173 5.76279 8.07727 5.74516C8.65725 5.74516 9.41782 5.92457 10.363 6.27715C11.3055 6.63092 11.9106 6.81032 12.176 6.81032C12.3743 6.81032 13.0466 6.60055 14.1863 6.18234C15.264 5.7945 16.1736 5.63391 16.9188 5.69717C18.938 5.86012 20.455 6.6561 21.4638 8.09013C19.6579 9.18432 18.7646 10.7169 18.7824 12.6829C18.7987 14.2142 19.3542 15.4886 20.4461 16.5004C20.9409 16.97 21.4934 17.333 22.1082 17.5907C21.9749 17.9774 21.8342 18.3477 21.6845 18.7033ZM17.0536 0.480137C17.0536 1.68041 16.6151 2.8011 15.741 3.83841C14.6862 5.07155 13.4104 5.78413 12.0269 5.67168C12.0093 5.52769 11.9991 5.37614 11.9991 5.21688C11.9991 4.06462 12.5007 2.83147 13.3915 1.82321C13.8362 1.3127 14.4018 0.888228 15.0877 0.549616C15.7721 0.216055 16.4195 0.031589 17.0284 0C17.0462 0.160458 17.0536 0.320926 17.0536 0.480121V0.480137Z" fill="#090909"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_2334_18965">
+              <rect width="24" height="24" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>
+            <span>Apple</span>
+          </a>
+          <a href="" class="modal__social">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_2334_18968)">
+              <path d="M24 12C24 17.9897 19.6116 22.9542 13.875 23.8542V15.4688H16.6711L17.2031 12H13.875V9.74906C13.875 8.79984 14.34 7.875 15.8306 7.875H17.3438V4.92188C17.3438 4.92188 15.9703 4.6875 14.6573 4.6875C11.9166 4.6875 10.125 6.34875 10.125 9.35625V12H7.07812V15.4688H10.125V23.8542C4.38844 22.9542 0 17.9897 0 12C0 5.37281 5.37281 0 12 0C18.6272 0 24 5.37281 24 12Z" fill="#1877F2"/>
+              <path d="M16.6711 15.4688L17.2031 12H13.875V9.74902C13.875 8.80003 14.3399 7.875 15.8306 7.875H17.3438V4.92188C17.3438 4.92188 15.9705 4.6875 14.6576 4.6875C11.9165 4.6875 10.125 6.34875 10.125 9.35625V12H7.07812V15.4688H10.125V23.8542C10.736 23.95 11.3621 24 12 24C12.6379 24 13.264 23.95 13.875 23.8542V15.4688H16.6711Z" fill="white"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_2334_18968">
+              <rect width="24" height="24" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" data-type="reset">
+    <div class="modal__container">
+      <button class="modal__close">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2511 12.2511C12.5858 11.9163 13.1285 11.9163 13.4632 12.2511L20 18.7878L26.5368 12.2511C26.8715 11.9163 27.4142 11.9163 27.7489 12.2511C28.0837 12.5858 28.0837 13.1285 27.7489 13.4632L21.2122 20L27.7489 26.5368C28.0837 26.8715 28.0837 27.4142 27.7489 27.7489C27.4142 28.0837 26.8715 28.0837 26.5368 27.7489L20 21.2122L13.4632 27.7489C13.1285 28.0837 12.5858 28.0837 12.2511 27.7489C11.9163 27.4142 11.9163 26.8715 12.2511 26.5368L18.7878 20L12.2511 13.4632C11.9163 13.1285 11.9163 12.5858 12.2511 12.2511Z" fill="#606266"/>
+        </svg>
+      </button>
+      <div class="modal__content">
+        <div class="modal__top">
+          <h2 class="modal__title title">Reset password</h2>
+          <div class="modal__desc">Write your email and we will send you a link to reset your password</div>
+        </div>
+        <form action="" id="resetForm" class="modal__form form-reset">
+          <div class="form__fieldset">
+            <div class="form__field">
+              <input type="text" name="first-name" data-placeholder="Email address" required>
+              <span class="form-error text-xs">Введите имя</span>
+            </div>
+          </div>
+          <button type="submit" class="modal__button form__button button button-dark" disabled>Send</button>
+        </form>
+        <button type="button" class="modal__button modal__back button button-border button-purple modal-btn" data-type="login">Back</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal" data-type="new-password">
+    <div class="modal__container">
+      <button class="modal__close">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2511 12.2511C12.5858 11.9163 13.1285 11.9163 13.4632 12.2511L20 18.7878L26.5368 12.2511C26.8715 11.9163 27.4142 11.9163 27.7489 12.2511C28.0837 12.5858 28.0837 13.1285 27.7489 13.4632L21.2122 20L27.7489 26.5368C28.0837 26.8715 28.0837 27.4142 27.7489 27.7489C27.4142 28.0837 26.8715 28.0837 26.5368 27.7489L20 21.2122L13.4632 27.7489C13.1285 28.0837 12.5858 28.0837 12.2511 27.7489C11.9163 27.4142 11.9163 26.8715 12.2511 26.5368L18.7878 20L12.2511 13.4632C11.9163 13.1285 11.9163 12.5858 12.2511 12.2511Z" fill="#606266"/>
+        </svg>
+      </button>
+      <div class="modal__content">
+        <div class="modal__top">
+          <h2 class="modal__title title">Enter new password</h2>
+          <div class="modal__desc">Save your password and don't forget it again</div>
+        </div>
+        <form action="" id="passwordForm" class="modal__form form-password">
+          <div class="form__fieldset">
+            <div class="form__field">
+              <input type="password" name="new-password" data-placeholder="Enter password" required>
+              <span class="form-error text-xs">Enter password</span>
+            </div>
+            <div class="form__field">
+              <input type="password" name="repeat-password" data-placeholder="Repeat passwor" required>
+              <span class="form-error text-xs">Repeat password</span>
+            </div>
+          </div>
+          <button type="submit" class="modal__button form__button button button-dark" disabled>Confirm</button>
+        </form>
+        <button type="button" class="modal__button modal__back button button-border button-purple modal-btn" data-type="login">Back</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal" data-type="search">
+    <div class="modal__container">
+      <button class="modal__close">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2511 12.2511C12.5858 11.9163 13.1285 11.9163 13.4632 12.2511L20 18.7878L26.5368 12.2511C26.8715 11.9163 27.4142 11.9163 27.7489 12.2511C28.0837 12.5858 28.0837 13.1285 27.7489 13.4632L21.2122 20L27.7489 26.5368C28.0837 26.8715 28.0837 27.4142 27.7489 27.7489C27.4142 28.0837 26.8715 28.0837 26.5368 27.7489L20 21.2122L13.4632 27.7489C13.1285 28.0837 12.5858 28.0837 12.2511 27.7489C11.9163 27.4142 11.9163 26.8715 12.2511 26.5368L18.7878 20L12.2511 13.4632C11.9163 13.1285 11.9163 12.5858 12.2511 12.2511Z" fill="#606266"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="modal" data-type="filter">
+    <div class="modal__container">
+      <button class="modal__close">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2511 12.2511C12.5858 11.9163 13.1285 11.9163 13.4632 12.2511L20 18.7878L26.5368 12.2511C26.8715 11.9163 27.4142 11.9163 27.7489 12.2511C28.0837 12.5858 28.0837 13.1285 27.7489 13.4632L21.2122 20L27.7489 26.5368C28.0837 26.8715 28.0837 27.4142 27.7489 27.7489C27.4142 28.0837 26.8715 28.0837 26.5368 27.7489L20 21.2122L13.4632 27.7489C13.1285 28.0837 12.5858 28.0837 12.2511 27.7489C11.9163 27.4142 11.9163 26.8715 12.2511 26.5368L18.7878 20L12.2511 13.4632C11.9163 13.1285 11.9163 12.5858 12.2511 12.2511Z" fill="#606266"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+      <a class="footer__logo"><img src="img/footer-logo.svg" alt="Website logo"></a>
+      <div class="footer__row">
+        <div class="footer__col text-up">
+          <div class="footer__caption">Learn</div>
+          <ul class="footer__menu">
+            <li><a href="">About</a></li>
+            <li><a href="">Faqs</a></li>
+            <li><a href="">Ushiro loyalty program</a></li>
+          </ul>
+        </div>
+        <div class="footer__col text-up">
+          <div class="footer__caption">Policies</div>
+          <ul class="footer__menu">
+            <li><a href="">Cookie policy</a></li>
+            <li><a href="">Privacy statement</a></li>
+            <li><a href="">California privacy statement</a></li>
+            <li><a href="">Terms & conditions</a></li>
+            <li><a href="">Accessibility statement</a></li>
+            <li><a href="">Data request form</a></li>
+          </ul>
+        </div>
+        <div class="footer__col text-up">
+          <div class="footer__caption">Ushiro</div>
+          <ul class="footer__menu">
+            <li><a href="">Discover</a></li>
+            <li><a href="">Location</a></li>
+            <li><a href="">Contact us</a></li>
+            <li><a href="">kith app</a></li>
+          </ul>
+        </div>
+        <div class="footer__col text-up">
+          <div class="footer__caption">Follow us</div>
+          <ul class="footer__menu">
+            <li><a href="">INSTAGRAM</a></li>
+            <li><a href="">FACEBOOK</a></li>
+            <li><a href="">TWITTER / X</a></li>
+            <li><a href="">TIKTOK</a></li>
+            <li><a href="">YOUTUBE</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copy text-up">
+        <div>2025. All rights reserved</div>
+        <div class="footer__location">
+          <span>Kazakhstan / Almaty</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.99935 12.8346C10.221 12.8346 12.8327 10.223 12.8327 7.0013C12.8327 3.77964 10.221 1.16797 6.99935 1.16797C3.77769 1.16797 1.16602 3.77964 1.16602 7.0013C1.16602 10.223 3.77769 12.8346 6.99935 12.8346Z" stroke="#7B7B7B" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.47401 4.52734L8.23734 8.23734L4.52734 9.47401L5.76401 5.76401L9.47401 4.52734Z" stroke="#7B7B7B" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js?_v=20251208102959"></script> 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20251208102959"></script>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js?_v=20251208102959"></script>
+<script src="js/app.js?_v=20251208102959"></script>
+  </body>
+</html>
