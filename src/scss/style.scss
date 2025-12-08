@@ -1940,8 +1940,33 @@
   &__desc {
     max-width: calc(760 * var(--width-multiplier));
     font-weight: 300;
+  }
+  &__button {
     @media (max-width: 767px) {
-      font-size: calc(14 * var(--width-multiplier));
+      width: 100%;
+    }
+  }
+}
+
+.thanks {
+  &-order {
+    &__title {
+      font-family: Inter;
+      strong {
+        font-weight: 600;
+      }
+      @media (max-width: 767px) {
+        font-size: calc(22 * var(--width-multiplier));
+      }
+    }
+    &__price {
+      font-weight: 300;
+      span {
+        font-weight: 600;
+      }
+    }
+    &__button {
+      min-width: calc(306 * var(--width-multiplier));
     }
   }
 }

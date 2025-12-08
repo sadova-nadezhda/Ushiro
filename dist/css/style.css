@@ -2557,6 +2557,26 @@ h4 {
   font-weight: 300;
 }
 
+.thanks-order__title {
+  font-family: Inter;
+}
+
+.thanks-order__title strong {
+  font-weight: 600;
+}
+
+.thanks-order__price {
+  font-weight: 300;
+}
+
+.thanks-order__price span {
+  font-weight: 600;
+}
+
+.thanks-order__button {
+  min-width: calc(306 * var(--width-multiplier));
+}
+
 .modals {
   position: fixed;
   top: 0;
@@ -3311,8 +3331,12 @@ h4 {
     padding: calc(50 * var(--width-multiplier)) 0;
   }
 
-  .page__desc {
-    font-size: calc(14 * var(--width-multiplier));
+  .page__button {
+    width: 100%;
+  }
+
+  .thanks-order__title {
+    font-size: calc(22 * var(--width-multiplier));
   }
 
   .modal {

@@ -175,7 +175,6 @@ window.addEventListener("load", function () {
     },
   });
 
-
   // ====== Product Slider ======
 
   const navSliderEl = document.querySelector('.js-prod-nav-slider');
@@ -318,7 +317,6 @@ window.addEventListener("load", function () {
   });
 
   // ====== Modals ======
-
   (function () {
     const modalWrapper = document.querySelector('.modals');
     if (!modalWrapper) return;
@@ -402,6 +400,20 @@ window.addEventListener("load", function () {
         closeCurrentModal();
       }
     });
+
+    const openModalFromPath = () => {
+      const path = window.location.pathname.split('/').filter(Boolean);
+      const last = path[path.length - 1];
+
+      if (!last) return;
+
+      const modal = getModalByType(last);
+      if (modal) {
+        openModal(last);
+      }
+    };
+
+    openModalFromPath();
   })();
 
   // ====== Form: profile ======
