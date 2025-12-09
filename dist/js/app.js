@@ -2,23 +2,71 @@ const header = document.querySelector("header");
 
 window.addEventListener("load", function () {
   // ====== Header / Burger ======
-  const link = document.querySelector(".header__burger");
-  const menu = document.querySelector(".header__nav");
+  // const link = document.querySelector(".header__burger");
+  // const menu = document.querySelector(".header__nav");
+  // const sectionTop = document.querySelector(".section-top");
+
+  // if (menu && link) {
+  //   link.addEventListener("click", function () {
+  //     link.classList.toggle("active");
+  //     menu.classList.toggle("open");
+  //   });
+
+  //   window.addEventListener("scroll", () => {
+  //     if (menu.classList.contains("open")) {
+  //       link.classList.remove("active");
+  //       menu.classList.remove("open");
+  //     }
+  //   });
+
+  //   document.addEventListener("click", (e) => {
+  //     const target = e.target;
+
+  //     if (
+  //       !target.closest(".header__nav") &&
+  //       !target.closest(".header__burger")
+  //     ) {
+  //       link.classList.remove("active");
+  //       menu.classList.remove("open");
+  //     }
+  //   });
+  // }
+
+  const burger = document.querySelector(".header__burger");
+  const nav = document.querySelector(".header__nav");
   const sectionTop = document.querySelector(".section-top");
 
-  if (menu && link) {
-    link.addEventListener("click", function () {
-      link.classList.toggle("active");
-      menu.classList.toggle("open");
-    });
+  if (nav && burger) {
 
-    window.addEventListener("scroll", () => {
-      if (menu.classList.contains("open")) {
-        link.classList.remove("active");
-        menu.classList.remove("open");
+    // ====== СБРАСЫВАЕМ ВСЕ КЛАССЫ МЕНЮ ======
+    const resetMenuState = () => {
+      nav.querySelectorAll(".active").forEach((el) => el.classList.remove("active"));
+      nav.querySelectorAll(".open").forEach((el) => el.classList.remove("open"));
+    };
+
+    // ====== БУРГЕР ======
+    burger.addEventListener("click", function () {
+      const isOpen = nav.classList.contains("open");
+
+      burger.classList.toggle("active");
+      nav.classList.toggle("open");
+
+      // если закрываем меню — сбрасываем подменю
+      if (isOpen) {
+        resetMenuState();
       }
     });
 
+    // ====== ЗАКРЫТИЕ ПРИ СКРОЛЛЕ ======
+    window.addEventListener("scroll", () => {
+      if (nav.classList.contains("open")) {
+        burger.classList.remove("active");
+        nav.classList.remove("open");
+        resetMenuState();
+      }
+    });
+
+    // ====== ЗАКРЫТИЕ ПРИ КЛИКЕ ВНЕ ======
     document.addEventListener("click", (e) => {
       const target = e.target;
 
@@ -26,8 +74,77 @@ window.addEventListener("load", function () {
         !target.closest(".header__nav") &&
         !target.closest(".header__burger")
       ) {
-        link.classList.remove("active");
-        menu.classList.remove("open");
+        burger.classList.remove("active");
+        nav.classList.remove("open");
+        resetMenuState();
+      }
+    });
+
+    // ====== ХЕЛПЕРЫ ДЛЯ SUBMENU ======
+    const closeSiblingSubmenus = (currentItem) => {
+      const list = currentItem.closest("ul");
+      if (!list) return;
+
+      list.querySelectorAll(".submenu-item.active").forEach((link) => {
+        if (link !== currentItem) link.classList.remove("active");
+      });
+
+      list.querySelectorAll(":scope > li > .submenu.open").forEach((submenu) => {
+        const parentLink = submenu.parentElement.querySelector(".submenu-item");
+        if (parentLink !== currentItem) submenu.classList.remove("open");
+      });
+    };
+
+    const closeAllTopSubmenus = () => {
+      nav.querySelectorAll(".header__item.active").forEach((el) => el.classList.remove("active"));
+      nav.querySelectorAll(".header__menu > li > .submenu.open").forEach((el) => el.classList.remove("open"));
+    };
+
+    // ====== ОБРАБОТКА КЛИКОВ ПО МЕНЮ ======
+    nav.addEventListener("click", (e) => {
+      const headerLink = e.target.closest(".header__item");
+      const submenuLink = e.target.closest(".submenu-item");
+
+      // ====== КЛИК ПО ВЕРХНЕМУ ПУНКТУ ======
+      if (headerLink && nav.contains(headerLink)) {
+        const li = headerLink.parentElement;
+        const submenu = li.querySelector(":scope > .submenu");
+
+        if (submenu) {
+          e.preventDefault();
+
+          const isActive = headerLink.classList.contains("active");
+
+          closeAllTopSubmenus();
+
+          if (!isActive) {
+            headerLink.classList.add("active");
+            submenu.classList.add("open");
+          }
+        }
+        return;
+      }
+
+      // ====== КЛИК ПО SUBMENU-ITEM ======
+      if (submenuLink && nav.contains(submenuLink)) {
+        const li = submenuLink.parentElement;
+        const submenu = li.querySelector(":scope > .submenu");
+
+        if (submenu) {
+          e.preventDefault();
+
+          const isActive = submenuLink.classList.contains("active");
+          closeSiblingSubmenus(submenuLink);
+
+          if (!isActive) {
+            submenuLink.classList.add("active");
+            submenu.classList.add("open");
+          } else {
+            submenuLink.classList.remove("active");
+            submenu.classList.remove("open");
+          }
+        }
+        return;
       }
     });
   }
