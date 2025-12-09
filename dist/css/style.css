@@ -3538,6 +3538,10 @@ h4 {
     padding: 0 calc(24 * var(--width-multiplier));
   }
 
+  .product-inner__container {
+    grid-template-columns: 100%;
+  }
+
   .order__group {
     gap: calc(12 * var(--width-multiplier));
   }
@@ -3846,10 +3850,6 @@ h4 {
 
   .news-inner__share {
     width: 100%;
-  }
-
-  .product-inner__container {
-    grid-template-columns: 100%;
   }
 
   .product-inner__size {

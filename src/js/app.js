@@ -2,36 +2,6 @@ const header = document.querySelector("header");
 
 window.addEventListener("load", function () {
   // ====== Header / Burger ======
-  // const link = document.querySelector(".header__burger");
-  // const menu = document.querySelector(".header__nav");
-  // const sectionTop = document.querySelector(".section-top");
-
-  // if (menu && link) {
-  //   link.addEventListener("click", function () {
-  //     link.classList.toggle("active");
-  //     menu.classList.toggle("open");
-  //   });
-
-  //   window.addEventListener("scroll", () => {
-  //     if (menu.classList.contains("open")) {
-  //       link.classList.remove("active");
-  //       menu.classList.remove("open");
-  //     }
-  //   });
-
-  //   document.addEventListener("click", (e) => {
-  //     const target = e.target;
-
-  //     if (
-  //       !target.closest(".header__nav") &&
-  //       !target.closest(".header__burger")
-  //     ) {
-  //       link.classList.remove("active");
-  //       menu.classList.remove("open");
-  //     }
-  //   });
-  // }
-
   const burger = document.querySelector(".header__burger");
   const nav = document.querySelector(".header__nav");
   const sectionTop = document.querySelector(".section-top");
@@ -51,7 +21,6 @@ window.addEventListener("load", function () {
       burger.classList.toggle("active");
       nav.classList.toggle("open");
 
-      // если закрываем меню — сбрасываем подменю
       if (isOpen) {
         resetMenuState();
       }
@@ -368,7 +337,7 @@ window.addEventListener("load", function () {
         grabCursor: true,
         lazy: true,
         slidesPerView: 5,
-        spaceBetween: 8,
+        spaceBetween: s(8),
         breakpoints: {
           1025: {
             direction: 'vertical',
@@ -380,7 +349,7 @@ window.addEventListener("load", function () {
       const swiperProd = new Swiper('.js-prod-slider', {
         grabCursor: true,
         lazy: true,
-        spaceBetween: 8,
+        spaceBetween: s(8),
         navigation: {
           nextEl: '.prod-button-next',
           prevEl: '.prod-button-prev'
