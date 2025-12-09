@@ -16,7 +16,7 @@
     letter-spacing: 4%;
     @media(max-width: 1024px) {
       gap: calc(20 * var(--width-multiplier));
-      padding: calc(16 * var(--width-multiplier)) 0;
+      padding: calc(20 * var(--width-multiplier)) 0;
     }
   }
   &__nav {

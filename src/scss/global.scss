@@ -183,12 +183,14 @@ select {
     }
   }
 }
+
 .preloader-gutters .bar {
   position: relative;
   width: 12.5%;
   height: 100%;
   background:transparent;
 }
+
 .preloader-gutters .inner-bar {
   position: absolute;
   top: 0;
@@ -197,6 +199,7 @@ select {
   height: 100%;
   background-color: var(--dark, $dark);
 }
+
 .site-main {
   display: none;
   opacity: 0;

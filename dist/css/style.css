@@ -3386,7 +3386,7 @@ h4 {
 
   .header__container {
     gap: calc(20 * var(--width-multiplier));
-    padding: calc(16 * var(--width-multiplier)) 0;
+    padding: calc(20 * var(--width-multiplier)) 0;
   }
 
   .header__nav .submenu .submenu-item {

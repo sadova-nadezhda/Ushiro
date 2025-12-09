@@ -487,154 +487,154 @@ window.addEventListener("load", function () {
   // ====== Modals ======
 
   const modalWrapper = document.querySelector('.modals');
-  if (!modalWrapper) return;
+   if (modalWrapper) {
+    const modals = Array.from(modalWrapper.querySelectorAll('.modal'));
+    const body = document.body;
 
-  const modals = Array.from(modalWrapper.querySelectorAll('.modal'));
-  const body = document.body;
+    const getModalByType = (type) =>
+      modalWrapper.querySelector(`.modal[data-type="${type}"]`);
 
-  const getModalByType = (type) =>
-    modalWrapper.querySelector(`.modal[data-type="${type}"]`);
+    const showWrapper = () => {
+      modalWrapper.style.opacity = 1;
+      modalWrapper.style.pointerEvents = 'all';
 
-  const showWrapper = () => {
-    modalWrapper.style.opacity = 1;
-    modalWrapper.style.pointerEvents = 'all';
-
-    if (window.lenis) {
-      window.lenis.stop();
-    }
-  };
-
-  const hideWrapper = () => {
-    modalWrapper.style.opacity = 0;
-    modalWrapper.style.pointerEvents = 'none';
-
-    if (window.lenis) {
-      window.lenis.start();
-    }
-  };
-
-  const openModal = (type) => {
-    modals.forEach((m) => {
-      m.style.display = 'none';
-      m.style.removeProperty('transform');
-    });
-
-    const modal = getModalByType(type);
-    if (!modal) return;
-
-    modal.style.display = 'block';
-    showWrapper();
-
-    if (window.gsap) {
-      gsap.fromTo(
-        modal,
-        { y: '-100%' },
-        { y: '0%', duration: 0.5, ease: 'power3.out' }
-      );
-    }
-  };
-
-  window.openModal = openModal;
-
-  const getModalTypeFromUrl = () => {
-    let type = null;
-
-    try {
-      const url = new URL(window.location.href);
-
-      // ?modal=type
-      const fromQuery = url.searchParams.get('modal');
-      if (fromQuery) return fromQuery;
-
-      if (url.hash) {
-        const hash = url.hash.replace('#', '');
-        if (!hash) return null;
-
-        const [key, value] = hash.split('=');
-        if (key === 'modal' && value) {
-          return value;
-        }
-
-        return hash;
+      if (window.lenis) {
+        window.lenis.stop();
       }
-    } catch (e) {}
-
-    return type;
-  };
-
-  const openModalFromUrlOrPath = () => {
-    const typeFromUrl = getModalTypeFromUrl();
-    if (typeFromUrl && getModalByType(typeFromUrl)) {
-      openModal(typeFromUrl);
-      return;
-    }
-
-    const path = window.location.pathname.split('/').filter(Boolean);
-    const last = path[path.length - 1];
-
-    if (!last) return;
-
-    if (getModalByType(last)) {
-      openModal(last);
-    }
-  };
-
-  openModalFromUrlOrPath();
-
-  const closeCurrentModal = () => {
-    const current = modals.find((m) => m.style.display !== 'none');
-
-    const finishClose = () => {
-      if (current) current.style.display = 'none';
-      hideWrapper();
-
-      const url = new URL(window.location.href);
-
-      if (url.searchParams.has('modal')) {
-        url.searchParams.delete('modal');
-      }
-
-      if (url.hash) {
-        url.hash = '';
-      }
-
-      history.replaceState(null, '', url.toString());
     };
 
-    if (current && window.gsap) {
-      gsap.to(current, {
-        y: '-100%',
-        duration: 0.4,
-        ease: 'power3.in',
-        onComplete: () => {
-          current.style.removeProperty('transform');
-          finishClose();
-        },
+    const hideWrapper = () => {
+      modalWrapper.style.opacity = 0;
+      modalWrapper.style.pointerEvents = 'none';
+
+      if (window.lenis) {
+        window.lenis.start();
+      }
+    };
+
+    const openModal = (type) => {
+      modals.forEach((m) => {
+        m.style.display = 'none';
+        m.style.removeProperty('transform');
       });
-    } else {
-      finishClose();
-    }
-  };
 
-  document.querySelectorAll('.modal-btn').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const type = btn.dataset.type;
-      if (type) openModal(type);
+      const modal = getModalByType(type);
+      if (!modal) return;
+
+      modal.style.display = 'block';
+      showWrapper();
+
+      if (window.gsap) {
+        gsap.fromTo(
+          modal,
+          { y: '-100%' },
+          { y: '0%', duration: 0.5, ease: 'power3.out' }
+        );
+      }
+    };
+
+    window.openModal = openModal;
+
+    const getModalTypeFromUrl = () => {
+      let type = null;
+
+      try {
+        const url = new URL(window.location.href);
+
+        // ?modal=type
+        const fromQuery = url.searchParams.get('modal');
+        if (fromQuery) return fromQuery;
+
+        if (url.hash) {
+          const hash = url.hash.replace('#', '');
+          if (!hash) return null;
+
+          const [key, value] = hash.split('=');
+          if (key === 'modal' && value) {
+            return value;
+          }
+
+          return hash;
+        }
+      } catch (e) {}
+
+      return type;
+    };
+
+    const openModalFromUrlOrPath = () => {
+      const typeFromUrl = getModalTypeFromUrl();
+      if (typeFromUrl && getModalByType(typeFromUrl)) {
+        openModal(typeFromUrl);
+        return;
+      }
+
+      const path = window.location.pathname.split('/').filter(Boolean);
+      const last = path[path.length - 1];
+
+      if (!last) return;
+
+      if (getModalByType(last)) {
+        openModal(last);
+      }
+    };
+
+    openModalFromUrlOrPath();
+
+    const closeCurrentModal = () => {
+      const current = modals.find((m) => m.style.display !== 'none');
+
+      const finishClose = () => {
+        if (current) current.style.display = 'none';
+        hideWrapper();
+
+        const url = new URL(window.location.href);
+
+        if (url.searchParams.has('modal')) {
+          url.searchParams.delete('modal');
+        }
+
+        if (url.hash) {
+          url.hash = '';
+        }
+
+        history.replaceState(null, '', url.toString());
+      };
+
+      if (current && window.gsap) {
+        gsap.to(current, {
+          y: '-100%',
+          duration: 0.4,
+          ease: 'power3.in',
+          onComplete: () => {
+            current.style.removeProperty('transform');
+            finishClose();
+          },
+        });
+      } else {
+        finishClose();
+      }
+    };
+
+    document.querySelectorAll('.modal-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const type = btn.dataset.type;
+        if (type) openModal(type);
+      });
     });
-  });
 
-  modalWrapper.addEventListener('click', (e) => {
-    if (e.target === modalWrapper || e.target.closest('.modal__close')) {
-      closeCurrentModal();
-    }
-  });
+    modalWrapper.addEventListener('click', (e) => {
+      if (e.target === modalWrapper || e.target.closest('.modal__close')) {
+        closeCurrentModal();
+      }
+    });
 
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalWrapper.style.pointerEvents === 'all') {
-      closeCurrentModal();
-    }
-  });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modalWrapper.style.pointerEvents === 'all') {
+        closeCurrentModal();
+      }
+    });
+  }
 
   // ====== Search ======
 
@@ -701,61 +701,64 @@ window.addEventListener("load", function () {
     }
   };
 
-  // клик по иконке в шапке
   searchBtn.addEventListener('click', (e) => {
     e.preventDefault();
     toggleSearch();
   });
 
-  // закрытие по Esc
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && isSearchOpen) {
       closeSearch();
     }
   });
 
-  // ====== Form: profile ======
+  // ====== Form ======
+  function initForm(form) {
+    const submitBtn = form.querySelector(".form__button");
+    if (!submitBtn) return;
 
-  const form = document.getElementById("profileForm");
+    const fields = form.querySelectorAll("input, textarea, select");
 
-  if (form) {
-    const saveButton = form.querySelector(".form__button");
-    const inputs = form.querySelectorAll("input");
+    // Save initial values
+    const initial = {};
+    fields.forEach(f => {
+      if (f.name) initial[f.name] = f.value;
+    });
 
-    if (saveButton && inputs.length) {
-      const initialValues = {};
+    function validate() {
+      let changed = false;
+      let valid = true;
 
-      inputs.forEach((input) => {
-        if (!input.name) return;
-        initialValues[input.name] = input.value;
+      fields.forEach(f => {
+        // required
+        if (f.required && f.value.trim() === "") {
+          valid = false;
+        }
+
+        // changed
+        if (f.name && f.value !== initial[f.name]) {
+          changed = true;
+        }
       });
 
-      function checkChanges() {
-        let changed = false;
-
-        inputs.forEach((input) => {
-          if (!input.name) return;
-          if (input.value !== initialValues[input.name]) {
-            changed = true;
-          }
-        });
-
-        saveButton.disabled = !changed;
-      }
-
-      inputs.forEach((input) => {
-        input.addEventListener("input", checkChanges);
-      });
-
-      checkChanges();
+      submitBtn.disabled = !(changed && valid);
     }
+
+    fields.forEach(f => f.addEventListener("input", validate));
+
+    validate();
   }
 
-  // ====== Form: password ======
+  // init all forms
+  document.querySelectorAll("form.js-form").forEach(initForm);
 
+
+  // ====== Password toggle ======
   document.querySelectorAll('.password-field').forEach(field => {
     const input = field.querySelector('input');
     const toggle = field.querySelector('.toggle-password');
+
+    if (!input || !toggle) return;
 
     toggle.addEventListener('click', () => {
       const isPassword = input.type === 'password';
@@ -764,26 +767,7 @@ window.addEventListener("load", function () {
     });
   });
 
-  // ====== Form: support ======
-
-  const supportForm = document.getElementById("supportForm");
-
-  if (supportForm) {
-    const textarea = supportForm.querySelector("textarea");
-    const button = supportForm.querySelector(".form__button");
-
-    if (textarea && button) {
-      function checkTextarea() {
-        button.disabled = textarea.value.trim().length === 0;
-      }
-
-      textarea.addEventListener("input", checkTextarea);
-      checkTextarea();
-    }
-  }
-
   // ====== Inputs with floating labels ======
-
   function initField(field) {
     const labelText = field.getAttribute("data-placeholder");
     if (!labelText) return;
@@ -822,6 +806,10 @@ window.addEventListener("load", function () {
     });
   }
 
+  document
+    .querySelectorAll('input[data-placeholder], textarea[data-placeholder]')
+    .forEach(initField);
+
   // ====== Favorite Card ======
   document.addEventListener("click", function (e) {
     const fav = e.target.closest(".catalog__favorites");
@@ -831,10 +819,6 @@ window.addEventListener("load", function () {
 
     e.preventDefault();
   });
-
-  document
-    .querySelectorAll('input[data-placeholder], textarea[data-placeholder]')
-    .forEach(initField);
 
   // ====== Mask for phone ======
 
