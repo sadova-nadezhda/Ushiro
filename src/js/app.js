@@ -80,6 +80,27 @@ window.addEventListener("load", function () {
       }
     });
 
+    const enableDesktopHoverReset = () => {
+      if (window.innerWidth <= 1024) return; // только для десктопов
+
+      const topItems = nav.querySelectorAll(".header__item");
+      const submenus = nav.querySelectorAll(".submenu");
+
+      topItems.forEach((item) => {
+        item.addEventListener("mouseleave", () => {
+          resetMenuState();
+        });
+      });
+
+      submenus.forEach((submenu) => {
+        submenu.addEventListener("mouseleave", () => {
+          resetMenuState();
+        });
+      });
+    };
+
+    enableDesktopHoverReset();
+
     // ====== ХЕЛПЕРЫ ДЛЯ SUBMENU ======
     const closeSiblingSubmenus = (currentItem) => {
       const list = currentItem.closest("ul");
@@ -880,6 +901,8 @@ window.addEventListener("load", function () {
     }
 
     _multiplier = getWidthMultiplier();
+
+    enableDesktopHoverReset();
 
     if (shopSwiper) {
       shopSwiper.params.spaceBetween = s(140);
