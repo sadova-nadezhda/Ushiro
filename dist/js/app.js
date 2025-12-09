@@ -681,6 +681,104 @@ window.addEventListener("load", function () {
     }
   });
 
+  // ====== Filter ======
+
+  const filterBtn = document.getElementById('filter-btn');
+  const filter = document.getElementById('filter');
+  const closeBtnFilter = document.querySelector('.filter__close');
+  const clearFilterBtn = document.querySelector('.filter__clear');
+  const appliedList = document.querySelector('.filter__list');
+  const applyButton = document.querySelector('.filter__button');
+
+  let isFilterOpen = false;
+
+  const openFilter = () => {
+    if (isFilterOpen) return;
+    isFilterOpen = true;
+
+    filter.style.display = 'block';
+
+    if (window.lenis) {
+      window.lenis.stop();
+    }
+    document.body.classList.add('search-open');
+
+    if (window.gsap) {
+      gsap.fromTo(
+        filter,
+        { x: '100%' },
+        { x: '0%', duration: 0.5, ease: 'power3.out' }
+      );
+    } else {
+      filter.style.transform = 'translateX(0%)';
+    }
+  };
+
+  const closeFilter = () => {
+    if (!isFilterOpen) return;
+    isFilterOpen = false;
+
+    const hideFilter = () => {
+      filter.style.display = 'none';
+      filter.style.transform = 'translateX(100%)';
+    };
+
+    if (window.gsap) {
+      gsap.to(filter, {
+        x: '100%',
+        duration: 0.4,
+        ease: 'power3.in',
+        onComplete: hideFilter,
+      });
+    } else {
+      hideFilter();
+    }
+
+    if (window.lenis) {
+      window.lenis.start();
+    }
+
+    document.body.classList.remove('search-open');
+  };
+
+  // === Очистка фильтров ===
+  const clearAllFilters = () => {
+    const checkboxes = filter.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = false;
+    });
+
+    if (appliedList) {
+      appliedList.innerHTML = '';
+    }
+
+    if (applyButton) {
+      applyButton.textContent = 'Apply';
+    }
+
+  };
+
+  filterBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    openFilter();
+  });
+
+  closeBtnFilter.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeFilter();
+  });
+
+  // clearFilterBtn.addEventListener('click', (e) => {
+  //   e.preventDefault();
+  //   clearAllFilters();
+  // });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isFilterOpen) {
+      closeFilter();
+    }
+  });
+
   // ====== Form ======
   function initForm(form) {
     const submitBtn = form.querySelector(".form__button");

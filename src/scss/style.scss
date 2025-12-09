@@ -747,6 +747,7 @@
       background-color: var(--white, $white);
       @media (max-width: 767px) {
         width: calc(50% - calc(6 * var(--width-multiplier)));
+        min-width: unset;
       }
     }
     &__sort {
@@ -2522,11 +2523,11 @@
 
 .search {
   position: absolute;
-  top: calc(51 * var(--width-multiplier));
+  top: calc(50 * var(--width-multiplier));
   left: 0;
   right: 0;
   display: none;
-  height: calc(100vh - calc(51 * var(--width-multiplier)));
+  height: calc(100vh - calc(50 * var(--width-multiplier)));
   background-color: rgba($color: #000000, $alpha: 0.5);
   overflow-y: auto;
   overflow-x: hidden;
@@ -2623,5 +2624,145 @@
 }
 
 .filter {
-  
+  position: fixed;
+  top: calc(50 * var(--width-multiplier));
+  right: 0;
+  display: none;
+  width: calc(400 * var(--width-multiplier));
+  height: calc(100vh - calc(50 * var(--width-multiplier)));
+  background-color: var(--white);
+  overflow-y: auto;
+  overflow-x: hidden;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  &__top, &__bottom {
+    padding: calc(16 * var(--width-multiplier)) calc(24 * var(--width-multiplier));
+    border-top: 1px solid #F2F2F7;
+    border-bottom: 1px solid #F2F2F7;
+  }
+  &__accordion {
+    gap: 0;
+  }
+  &__bottom {
+    margin-top: auto;
+  }
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: calc(16 * var(--width-multiplier));
+    margin-bottom: calc(16 * var(--width-multiplier));
+  }
+  &__caption {
+    margin-right: auto;
+    font-size: calc(12 * var(--width-multiplier));
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.04em;
+  }
+  &__close {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    svg {
+      display: block;
+      min-width: calc(24 * var(--width-multiplier));
+      width: calc(24 * var(--width-multiplier));
+      height: calc(24 * var(--width-multiplier));
+      pointer-events: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__clear {
+    padding: calc(6 * var(--width-multiplier)) calc(8 * var(--width-multiplier));
+    border: 0;
+    background-color: #F2F2F7;
+    font-size: calc(14 * var(--width-multiplier));
+    line-height: 1;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+    &:hover {
+      cursor: pointer;
+      color: var(--white);
+      background-color: var(--dark);
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: calc(12 * var(--width-multiplier));
+  }
+  &__li {
+    display: flex;
+    align-items: center;
+    gap: calc(8 * var(--width-multiplier));
+    padding: calc(8 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
+    background-color: #F2F2F7;
+    span {
+      cursor: pointer;
+    }
+    svg {
+      display: block;
+      min-width: calc(20 * var(--width-multiplier));
+      width: calc(20 * var(--width-multiplier));
+      height: calc(20 * var(--width-multiplier));
+      pointer-events: none;
+    }
+  }
+  &__item {
+    padding: 0;
+    background-color: transparent;
+    &.active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+  }
+  &__head {
+    padding: calc(16 * var(--width-multiplier)) calc(24 * var(--width-multiplier));
+    border-top: 1px solid #F2F2F7;
+    border-bottom: 1px solid #F2F2F7;
+    font-size: calc(12 * var(--width-multiplier));
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    svg {
+      display: block;
+      min-width: calc(20 * var(--width-multiplier));
+      width: calc(20 * var(--width-multiplier));
+      height: calc(20 * var(--width-multiplier));
+      pointer-events: none;
+      transition: transform 0.3s ease-out;
+    }
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: calc(16 * var(--width-multiplier));
+    padding: calc(16 * var(--width-multiplier)) calc(24 * var(--width-multiplier));
+  }
+  &__button {
+    width: 100%;
+  }
+  &__field {
+    display: flex;
+    align-items: center;
+    gap: calc(8 * var(--width-multiplier));
+    font-size: calc(12 * var(--width-multiplier));
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 }

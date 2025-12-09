@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Catalog</title>
   <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.15/dist/lenis.css?_v=20251209160435">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20251209160435" />
-  <link rel="stylesheet" href="css/style.css?_v=20251209160435" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.15/dist/lenis.css?_v=20251209174403">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20251209174403" />
+  <link rel="stylesheet" href="css/style.css?_v=20251209174403" />
 </head>
 
   <body>
@@ -216,7 +216,7 @@
                 </label>
               </div>
               <div class="catalog-inner__filters">
-                <button class="catalog-inner__filter button">
+                <button id="filter-btn" class="catalog-inner__filter button">
                   <span>Filters</span>
                 </button>
                 <select name="" id="" class="catalog-inner__sort">
@@ -451,6 +451,120 @@
       </section>
     </main>
 
+    <div class="filter" id="filter" data-lenis-prevent>
+  <div class="filter__container">
+    <div class="filter__top">
+      <div class="filter__group">
+        <div class="filter__caption text-up">Applied filters</div>
+        <button class="filter__clear">Clear All</button>
+        <button class="filter__close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.6 5.6L18.4 18.4M5.6 18.4L18.4 5.6" stroke="#090909" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </div>
+      <div class="filter__list">
+        <div class="filter__li">
+          Men
+          <span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.20001 5.2L14.8 14.8M5.20001 14.8L14.8 5.2" stroke="#090909" stroke-width="1.5"/>
+            </svg>
+          </span>
+        </div>
+        <div class="filter__li">
+          Shoes
+          <span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.20001 5.2L14.8 14.8M5.20001 14.8L14.8 5.2" stroke="#090909" stroke-width="1.5"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="filter__accordion accordion">
+      <div class="accordion__item filter__item">
+        <div class="accordion__head filter__head">
+          <span>Gender</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.8 6.5L10 14.9L2.20001 6.5" stroke="#090909" stroke-width="1.5" stroke-linecap="square"/>
+          </svg> 
+        </div>
+        <div class="accordion__body filter__body">
+          <div class="accordion__box filter__box">
+            <div class="filter__field">
+              <input type="checkbox" name="color" id="gender-1">
+              <label for="gender-1" class="filter__label label-default">Men</label>
+            </div>
+            <div class="filter__field">
+              <input type="checkbox" name="color" id="gender-2">
+              <label for="gender-2" class="filter__label label-default">Woman</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion__item filter__item">
+        <div class="accordion__head filter__head">
+          <span>Size</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.8 6.5L10 14.9L2.20001 6.5" stroke="#090909" stroke-width="1.5" stroke-linecap="square"/>
+          </svg> 
+        </div>
+        <div class="accordion__body filter__body">
+          <div class="accordion__box filter__box">
+            <div class="filter__field">
+              <input type="checkbox" name="color" id="size-1">
+              <label for="size-1" class="filter__label label-default">xs</label>
+            </div>
+            <div class="filter__field">
+              <input type="checkbox" name="color" id="size-2">
+              <label for="size-2" class="filter__label label-default">s</label>
+            </div>
+            <div class="filter__field">
+              <input type="checkbox" name="color" id="size-3">
+              <label for="size-3" class="filter__label label-default">m</label>
+            </div>
+            <div class="filter__field">
+              <input type="checkbox" name="color" id="size-4">
+              <label for="size-4" class="filter__label label-default">l</label>
+            </div>
+            <div class="filter__field">
+              <input type="checkbox" name="color" id="size-5">
+              <label for="size-5" class="filter__label label-default">xl</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion__item filter__item">
+        <div class="accordion__head filter__head">
+          <span>Color</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.8 6.5L10 14.9L2.20001 6.5" stroke="#090909" stroke-width="1.5" stroke-linecap="square"/>
+          </svg> 
+        </div>
+        <div class="accordion__body filter__body">
+          <div class="accordion__box filter__box">
+            <div class="filter__field">
+              <input type="checkbox" name="color" id="color-1">
+              <label for="color-1" class="filter__label label-default">Бордовый</label>
+            </div>
+            <div class="filter__field">
+              <input type="checkbox" name="color" id="color-2">
+              <label for="color-2" class="filter__label label-default">Белый</label>
+            </div>
+            <div class="filter__field">
+              <input type="checkbox" name="color" id="color-3">
+              <label for="color-3" class="filter__label label-default">Зеленый</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="filter__bottom">
+      <button class="filter__button button button-dark">Apply (23)</button>
+    </div>
+  </div>
+</div>
     <div class="modals" data-lenis-prevent>
   <div class="modal modal-welcome" data-type="welcome">
     <div class="modal-welcome__container">
@@ -793,9 +907,9 @@
   </div>
 </footer>
  
-    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js?_v=20251209160435"></script> 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20251209160435"></script>
-<script src="https://unpkg.com/gsap@3/dist/gsap.min.js?_v=20251209160435"></script>
-<script src="js/app.js?_v=20251209160435" defer></script>
+    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js?_v=20251209174403"></script> 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20251209174403"></script>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js?_v=20251209174403"></script>
+<script src="js/app.js?_v=20251209174403" defer></script>
   </body>
 </html>

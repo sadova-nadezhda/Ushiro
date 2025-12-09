@@ -17,6 +17,7 @@
   --width-base: 1280;
   --width-current: 100vw;
   --width-multiplier: var(--width-current) / var(--width-base);
+  --size: calc(16 * var(--width-multiplier));
 }
 
 @media(max-width: 1024px) {
@@ -213,7 +214,7 @@ select {
   }
 }
 
-input, select, textarea {
+input:not([type="checkbox"]):not([type="radio"]), select, textarea {
   width: 100%;
   padding: calc(20 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
   border: 1px solid var(--color-border, $color-border);
@@ -255,10 +256,89 @@ select {
   background: url(../img/arrow-down.svg) no-repeat top 50% right calc(12 * var(--width-multiplier));
   background-size: calc(18 * var(--width-multiplier));
   background-color: var(--white, $white);
+  cursor: pointer;
   @media (max-width: 767px) {
     padding: calc(16 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
     padding-right: calc(26 * var(--width-multiplier));
     background-size: calc(14 * var(--width-multiplier));
+  }
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+    display: grid;
+  inline-size: var(--size);
+  block-size: var(--size);
+  margin: 0;
+  margin-right: calc(8 * var(--width-multiplier));
+  border: calc(1 * var(--width-multiplier)) solid var(--dark, $dark);
+  border-radius: calc(2 * var(--width-multiplier));
+  place-content: center;
+  background: #fff;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: calc(10 * var(--width-multiplier));
+  height: calc(10 * var(--width-multiplier));
+  margin-top: calc(-2 * var(--width-multiplier));
+  transform: scale(0);
+  transition: transform .12s ease-in-out;
+  clip-path: polygon(14% 52%, 0 66%, 38% 100%, 100% 28%, 86% 14%, 38% 72%);
+  background: var(--dark, $dark);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: grid;
+  margin: 0;
+  margin-right: calc(8 * var(--width-multiplier));
+  inline-size: var(--size);
+  block-size: var(--size);
+  border: calc(1 * var(--width-multiplier)) solid var(--dark, $dark);
+  border-radius: 50%;
+  background: #fff;
+  place-content: center;
+}
+
+input[type="radio"]::after {
+  content: "";
+  width: calc(10 * var(--width-multiplier));
+  height: calc(10 * var(--width-multiplier));
+  border-radius: 50%;
+  background: var(--dark, $dark);
+  transform: scale(0);
+  transition: transform .12s ease-in-out;
+}
+
+input[type="radio"]:checked::after { transform: scale(1); }
+
+.form__field {
+  span {
+    display: none;
+    margin-top: calc(4 * var(--width-multiplier));
+    font-size: calc(12 * var(--width-multiplier));
+    line-height: 1;
+  }
+  &.error {
+    input, select, textarea {
+      color: var(--red, $red);
+      border-color: var(--red, $red);
+      &::placeholder {
+        color: var(--red, $red);
+      }
+    }
+    span {
+      display: block;
+      color: var(--red, $red);
+    }
   }
 }
 
@@ -280,6 +360,10 @@ select {
   &-dark {
     color: var(--white, $white);
     background-color: var(--dark, $dark);
+    transition: transform 0.3s ease-out;
+    &:hover {
+      transform: scale(0.98);
+    }
   }
   &-border {
     border-color: var(--dark, $dark);

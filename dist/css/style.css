@@ -173,6 +173,7 @@
   --width-base: 1280;
   --width-current: 100vw;
   --width-multiplier: var(--width-current) / var(--width-base);
+  --size: calc(16 * var(--width-multiplier));
 }
 
 html {
@@ -341,7 +342,7 @@ select {
   padding: 0 calc(24 * var(--width-multiplier));
 }
 
-input,
+input:not([type=checkbox]):not([type=radio]),
 select,
 textarea {
   width: 100%;
@@ -353,18 +354,18 @@ textarea {
   font: inherit;
 }
 
-input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
+input:not([type=checkbox]):not([type=radio])::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
   color: var(--color-txt-light, #9599A1);
 }
 
-input::placeholder,
+input:not([type=checkbox]):not([type=radio])::placeholder,
 select::placeholder,
 textarea::placeholder {
   color: var(--color-txt-light, #9599A1);
 }
 
-input:focus,
-input:focus-visible,
+input:not([type=checkbox]):not([type=radio]):focus,
+input:not([type=checkbox]):not([type=radio]):focus-visible,
 select:focus,
 select:focus-visible,
 textarea:focus,
@@ -395,6 +396,97 @@ select {
   background: url(../img/arrow-down.svg) no-repeat top 50% right calc(12 * var(--width-multiplier));
   background-size: calc(18 * var(--width-multiplier));
   background-color: var(--white, #FFFFFF);
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  display: grid;
+  inline-size: var(--size);
+  block-size: var(--size);
+  margin: 0;
+  margin-right: calc(8 * var(--width-multiplier));
+  border: calc(1 * var(--width-multiplier)) solid var(--dark, #090909);
+  border-radius: calc(2 * var(--width-multiplier));
+  place-content: center;
+  background: #fff;
+  cursor: pointer;
+}
+
+input[type=checkbox]::before {
+  content: "";
+  width: calc(10 * var(--width-multiplier));
+  height: calc(10 * var(--width-multiplier));
+  margin-top: calc(-2 * var(--width-multiplier));
+  transform: scale(0);
+  transition: transform 0.12s ease-in-out;
+  -webkit-clip-path: polygon(14% 52%, 0 66%, 38% 100%, 100% 28%, 86% 14%, 38% 72%);
+          clip-path: polygon(14% 52%, 0 66%, 38% 100%, 100% 28%, 86% 14%, 38% 72%);
+  background: var(--dark, #090909);
+}
+
+input[type=checkbox]:checked::before {
+  transform: scale(1);
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  display: grid;
+  margin: 0;
+  margin-right: calc(8 * var(--width-multiplier));
+  inline-size: var(--size);
+  block-size: var(--size);
+  border: calc(1 * var(--width-multiplier)) solid var(--dark, #090909);
+  border-radius: 50%;
+  background: #fff;
+  place-content: center;
+}
+
+input[type=radio]::after {
+  content: "";
+  width: calc(10 * var(--width-multiplier));
+  height: calc(10 * var(--width-multiplier));
+  border-radius: 50%;
+  background: var(--dark, #090909);
+  transform: scale(0);
+  transition: transform 0.12s ease-in-out;
+}
+
+input[type=radio]:checked::after {
+  transform: scale(1);
+}
+
+.form__field span {
+  display: none;
+  margin-top: calc(4 * var(--width-multiplier));
+  font-size: calc(12 * var(--width-multiplier));
+  line-height: 1;
+}
+
+.form__field.error input,
+.form__field.error select,
+.form__field.error textarea {
+  color: var(--red, #FF383C);
+  border-color: var(--red, #FF383C);
+}
+
+.form__field.error input::-moz-placeholder, .form__field.error select::-moz-placeholder, .form__field.error textarea::-moz-placeholder {
+  color: var(--red, #FF383C);
+}
+
+.form__field.error input::placeholder,
+.form__field.error select::placeholder,
+.form__field.error textarea::placeholder {
+  color: var(--red, #FF383C);
+}
+
+.form__field.error span {
+  display: block;
+  color: var(--red, #FF383C);
 }
 
 .button {
@@ -420,6 +512,11 @@ select {
 .button-dark {
   color: var(--white, #FFFFFF);
   background-color: var(--dark, #090909);
+  transition: transform 0.3s ease-out;
+}
+
+.button-dark:hover {
+  transform: scale(0.98);
 }
 
 .button-border {
@@ -3229,11 +3326,11 @@ h4 {
 
 .search {
   position: absolute;
-  top: calc(51 * var(--width-multiplier));
+  top: calc(50 * var(--width-multiplier));
   left: 0;
   right: 0;
   display: none;
-  height: calc(100vh - 51 * var(--width-multiplier));
+  height: calc(100vh - 50 * var(--width-multiplier));
   background-color: rgba(0, 0, 0, 0.5);
   overflow-y: auto;
   overflow-x: hidden;
@@ -3312,6 +3409,165 @@ h4 {
 
 .search .catalog__top {
   height: calc(290 * var(--width-multiplier));
+}
+
+.filter {
+  position: fixed;
+  top: calc(50 * var(--width-multiplier));
+  right: 0;
+  display: none;
+  width: calc(400 * var(--width-multiplier));
+  height: calc(100vh - 50 * var(--width-multiplier));
+  background-color: var(--white);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.filter__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.filter__top,
+.filter__bottom {
+  padding: calc(16 * var(--width-multiplier)) calc(24 * var(--width-multiplier));
+  border-top: 1px solid #F2F2F7;
+  border-bottom: 1px solid #F2F2F7;
+}
+
+.filter__accordion {
+  gap: 0;
+}
+
+.filter__bottom {
+  margin-top: auto;
+}
+
+.filter__group {
+  display: flex;
+  align-items: center;
+  gap: calc(16 * var(--width-multiplier));
+  margin-bottom: calc(16 * var(--width-multiplier));
+}
+
+.filter__caption {
+  margin-right: auto;
+  font-size: calc(12 * var(--width-multiplier));
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.filter__close {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.filter__close svg {
+  display: block;
+  min-width: calc(24 * var(--width-multiplier));
+  width: calc(24 * var(--width-multiplier));
+  height: calc(24 * var(--width-multiplier));
+  pointer-events: none;
+}
+
+.filter__close:hover {
+  cursor: pointer;
+}
+
+.filter__clear {
+  padding: calc(6 * var(--width-multiplier)) calc(8 * var(--width-multiplier));
+  border: 0;
+  background-color: #F2F2F7;
+  font-size: calc(14 * var(--width-multiplier));
+  line-height: 1;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.filter__clear:hover {
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--dark);
+}
+
+.filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: calc(12 * var(--width-multiplier));
+}
+
+.filter__li {
+  display: flex;
+  align-items: center;
+  gap: calc(8 * var(--width-multiplier));
+  padding: calc(8 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
+  background-color: #F2F2F7;
+}
+
+.filter__li span {
+  cursor: pointer;
+}
+
+.filter__li svg {
+  display: block;
+  min-width: calc(20 * var(--width-multiplier));
+  width: calc(20 * var(--width-multiplier));
+  height: calc(20 * var(--width-multiplier));
+  pointer-events: none;
+}
+
+.filter__item {
+  padding: 0;
+  background-color: transparent;
+}
+
+.filter__item.active svg {
+  transform: rotate(180deg);
+}
+
+.filter__head {
+  padding: calc(16 * var(--width-multiplier)) calc(24 * var(--width-multiplier));
+  border-top: 1px solid #F2F2F7;
+  border-bottom: 1px solid #F2F2F7;
+  font-size: calc(12 * var(--width-multiplier));
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.filter__head svg {
+  display: block;
+  min-width: calc(20 * var(--width-multiplier));
+  width: calc(20 * var(--width-multiplier));
+  height: calc(20 * var(--width-multiplier));
+  pointer-events: none;
+  transition: transform 0.3s ease-out;
+}
+
+.filter__box {
+  display: flex;
+  flex-direction: column;
+  gap: calc(16 * var(--width-multiplier));
+  padding: calc(16 * var(--width-multiplier)) calc(24 * var(--width-multiplier));
+}
+
+.filter__button {
+  width: 100%;
+}
+
+.filter__field {
+  display: flex;
+  align-items: center;
+  gap: calc(8 * var(--width-multiplier));
+  font-size: calc(12 * var(--width-multiplier));
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
@@ -3603,7 +3859,7 @@ h4 {
     height: auto;
   }
 
-  input,
+  input:not([type=checkbox]):not([type=radio]),
   select,
   textarea {
     padding: calc(16 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
@@ -3767,6 +4023,7 @@ h4 {
 
   .catalog-inner__filter {
     width: calc(50% - 6 * var(--width-multiplier));
+    min-width: unset;
   }
 
   .catalog-inner__sort {
@@ -4095,6 +4352,14 @@ h4 {
 
   .search .catalog__top {
     height: calc(155 * var(--width-multiplier));
+  }
+
+  .filter__item {
+    padding: 0;
+  }
+
+  .filter {
+    width: 100%;
   }
 }
 
