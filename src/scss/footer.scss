@@ -46,6 +46,26 @@
     flex-direction: column;
     gap: calc(14 * var(--width-multiplier));
     color: var(--light, $light);
+    a {
+      position: relative;
+      transition: color 0.3s ease-out;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 2px;
+        width: 0;
+        background-color: var(--dark);
+        transition: width 0.3s ease-out;
+      }
+      &:hover {
+        color: var(--dark);
+        &::after {
+          width: 100%;
+        }
+      }
+    }
   }
   &__copy {
     display: flex;

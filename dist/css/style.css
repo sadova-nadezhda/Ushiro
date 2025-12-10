@@ -938,6 +938,30 @@ h4 {
   color: var(--light, rgba(27, 31, 38, 0.72));
 }
 
+.footer__menu a {
+  position: relative;
+  transition: color 0.3s ease-out;
+}
+
+.footer__menu a::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--dark);
+  transition: width 0.3s ease-out;
+}
+
+.footer__menu a:hover {
+  color: var(--dark);
+}
+
+.footer__menu a:hover::after {
+  width: 100%;
+}
+
 .footer__copy {
   display: flex;
   align-items: center;
