@@ -935,8 +935,6 @@ window.addEventListener("load", function () {
 
     _multiplier = getWidthMultiplier();
 
-    enableDesktopHoverReset();
-
     if (shopSwiper) {
       shopSwiper.params.spaceBetween = s(140);
       shopSwiper.update();

@@ -40,8 +40,16 @@ html {
   scroll-padding-top: calc(50 * var(--width-multiplier));
 }
 
-:-webkit-scrollbar {
-  width: 4px;
+::-webkit-scrollbar {
+  width: calc(4 * var(--width-multiplier));
+}
+
+::-webkit-scrollbar-track {
+  background: #F2F2F7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #090909;
 }
 
 *,
@@ -86,6 +94,7 @@ body {
   color: var(--dark, $dark);
   font: 400 calc(16 * var(--width-multiplier))/1.3 Inter;
   text-rendering: optimizeSpeed;
+  overflow-x: hidden;
 }
 
 ul,

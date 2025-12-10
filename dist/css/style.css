@@ -182,8 +182,16 @@ html {
   scroll-padding-top: calc(50 * var(--width-multiplier));
 }
 
-:-webkit-scrollbar {
-  width: 4px;
+::-webkit-scrollbar {
+  width: calc(4 * var(--width-multiplier));
+}
+
+::-webkit-scrollbar-track {
+  background: #F2F2F7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #090909;
 }
 
 *,
@@ -228,6 +236,7 @@ body {
   color: var(--dark, #090909);
   font: 400 calc(16 * var(--width-multiplier))/1.3 Inter;
   text-rendering: optimizeSpeed;
+  overflow-x: hidden;
 }
 
 ul,
@@ -865,6 +874,21 @@ h4 {
 
 .header__burger span:nth-child(3) {
   bottom: calc(5 * var(--width-multiplier));
+}
+
+.header__burger.active span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.header__burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__burger.active span:nth-child(3) {
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 .footer {
@@ -3657,9 +3681,14 @@ h4 {
     left: 0;
   }
 
+  .header__nav .submenu .submenu {
+    left: calc(100 * var(--width-multiplier));
+  }
+
   .header__nav .submenu {
-    width: 100%;
+    width: 100vw;
     z-index: 1;
+    left: calc(100 * var(--width-multiplier));
   }
 
   .header__nav .submenu.open {
@@ -3672,7 +3701,7 @@ h4 {
   .header__nav {
     position: absolute;
     top: 100%;
-    left: -100%;
+    left: 100%;
     display: block;
     min-width: calc(260 * var(--width-multiplier));
     height: calc(100vh - 50 * var(--width-multiplier));
@@ -3885,11 +3914,11 @@ h4 {
   }
 
   .header__nav {
-    width: 100%;
+    width: 100vw;
   }
 
   .header__menu li {
-    width: 100%;
+    width: 100vw;
   }
 
   .header__menu {
@@ -4308,10 +4337,23 @@ h4 {
     padding-top: calc(32 * var(--width-multiplier));
   }
 
-  .modal-welcome {
+  .modal__socials {
+    flex-direction: column;
+  }
+
+  .modal__social svg {
+    min-width: calc(20 * var(--width-multiplier));
+    width: calc(20 * var(--width-multiplier));
+    height: calc(20 * var(--width-multiplier));
+  }
+
+  .modal__social {
     width: 100%;
-    margin: 0;
-    margin-top: auto;
+    padding: calc(12 * var(--width-multiplier)) calc(14 * var(--width-multiplier));
+  }
+
+  .modal-welcome {
+    width: calc(100% - 16 * var(--width-multiplier));
   }
 
   .modal-welcome__container {
