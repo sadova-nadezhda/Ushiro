@@ -78,86 +78,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: Inter;
-  font-display: swap;
-  src: url("../fonts/Inter_24pt-Light.woff2") format("woff2"), url("../fonts/Inter_24pt-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Inter;
-  font-display: swap;
-  src: url("../fonts/Inter_24pt-Regular.woff2") format("woff2"), url("../fonts/Inter_24pt-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Inter;
-  font-display: swap;
-  src: url("../fonts/Inter_24pt-Medium.woff2") format("woff2"), url("../fonts/Inter_24pt-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Inter;
-  font-display: swap;
-  src: url("../fonts/Inter_24pt-SemiBold.woff2") format("woff2"), url("../fonts/Inter_24pt-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Inter;
-  font-display: swap;
-  src: url("../fonts/Inter_24pt-Bold.woff2") format("woff2"), url("../fonts/Inter_24pt-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Inter;
-  font-display: swap;
-  src: url("../fonts/Inter_24pt-ExtraBold.woff2") format("woff2"), url("../fonts/Inter_24pt-ExtraBold.woff") format("woff");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Inter;
-  font-display: swap;
-  src: url("../fonts/Inter_24pt-Black.woff2") format("woff2"), url("../fonts/Inter_24pt-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: PlayfairDisplaySC;
-  font-display: swap;
-  src: url("../fonts/PlayfairDisplaySC-Regular.woff2") format("woff2"), url("../fonts/PlayfairDisplaySC-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: PlayfairDisplaySC;
-  font-display: swap;
-  src: url("../fonts/PlayfairDisplaySC-Bold.woff2") format("woff2"), url("../fonts/PlayfairDisplaySC-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: PlayfairDisplaySC;
-  font-display: swap;
-  src: url("../fonts/PlayfairDisplaySC-Black.woff2") format("woff2"), url("../fonts/PlayfairDisplaySC-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-
 :root {
   --white: #FFFFFF;
   --dark: #090909;
@@ -385,8 +305,8 @@ textarea:focus-visible {
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-  box-shadow: 0 0 0 1000px var(--color-white) inset !important;
-  -webkit-text-fill-color: var(--color-dark) !important;
+  box-shadow: 0 0 0 1000px var(--white) inset !important;
+  -webkit-text-fill-color: var(--dark) !important;
   -webkit-transition: background-color 9999s ease-in-out 0s;
   transition: background-color 9999s ease-in-out 0s;
 }
