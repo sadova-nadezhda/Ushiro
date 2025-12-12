@@ -245,9 +245,9 @@ input:not([type="checkbox"]):not([type="radio"]), select, textarea {
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 1000px var(--color-white) inset !important;
-  box-shadow: 0 0 0 1000px var(--color-white) inset !important;
-  -webkit-text-fill-color: var(--color-dark) !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--white) inset !important;
+  box-shadow: 0 0 0 1000px var(--white) inset !important;
+  -webkit-text-fill-color: var(--dark) !important;
   transition: background-color 9999s ease-in-out 0s;
 }
 
