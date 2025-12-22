@@ -30,6 +30,35 @@
       </div>
     </div>
     <div class="filter__accordion accordion">
+      <!-- Выводить только с планшета 1024px -->
+      <div class="accordion__item filter__item">
+        <div class="accordion__head filter__head">
+          <span>Category</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.8 6.5L10 14.9L2.20001 6.5" stroke="#090909" stroke-width="1.5" stroke-linecap="square"/>
+          </svg> 
+        </div>
+        <div class="accordion__body filter__body">
+          <div class="accordion__box filter__box">
+            <div class="filter__field">
+              <input type="radio" name="gender" id="gender-1">
+              <label for="gender-1" class="filter__label label-default">All</label>
+            </div>
+            <div class="filter__field">
+              <input type="radio" name="gender" id="gender-2">
+              <label for="gender-2" class="filter__label label-default">Men</label>
+            </div>
+            <div class="filter__field">
+              <input type="radio" name="gender" id="gender-3">
+              <label for="gender-3" class="filter__label label-default">Woman</label>
+            </div>
+            <div class="filter__field">
+              <input type="radio" name="gender" id="gender-4">
+              <label for="gender-4" class="filter__label label-default">Accessories</label>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="accordion__item filter__item">
         <div class="accordion__head filter__head">
           <span>Gender</span>
@@ -41,11 +70,15 @@
           <div class="accordion__box filter__box">
             <div class="filter__field">
               <input type="radio" name="gender" id="gender-1">
-              <label for="gender-1" class="filter__label label-default">Men</label>
+              <label for="gender-1" class="filter__label label-default">All</label>
             </div>
             <div class="filter__field">
               <input type="radio" name="gender" id="gender-2">
-              <label for="gender-2" class="filter__label label-default">Woman</label>
+              <label for="gender-2" class="filter__label label-default">Men</label>
+            </div>
+            <div class="filter__field">
+              <input type="radio" name="gender" id="gender-3">
+              <label for="gender-3" class="filter__label label-default">Woman</label>
             </div>
           </div>
         </div>

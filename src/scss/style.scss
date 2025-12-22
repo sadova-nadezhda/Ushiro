@@ -727,6 +727,9 @@
         color: var(--white, $white);
         background-color: var(--dark, $dark);
       }
+      @media (max-width: 1024px) {
+        display: none;
+      }
     }
     &__filters {
       display: flex;
