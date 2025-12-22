@@ -1041,7 +1041,6 @@ h4 {
   padding: calc(24 * var(--width-multiplier));
   background-color: #F9F9F9;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .accordion__item.active .accordion__icon span:last-child {
@@ -1053,6 +1052,7 @@ h4 {
   justify-content: space-between;
   align-items: center;
   gap: calc(16 * var(--width-multiplier));
+  cursor: pointer;
 }
 
 .accordion__caption {
@@ -3647,6 +3647,10 @@ h4 {
   font-size: calc(12 * var(--width-multiplier));
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.filter__field label {
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {

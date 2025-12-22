@@ -75,7 +75,6 @@
     padding: calc(24 * var(--width-multiplier));
     background-color: #F9F9F9;
     overflow: hidden;
-    cursor: pointer;
     &.active {
       .accordion__icon {
         span {
@@ -94,6 +93,7 @@
     justify-content: space-between;
     align-items: center;
     gap: calc(16 * var(--width-multiplier));
+    cursor: pointer;
   }
   &__caption {
     font-size: calc(18 * var(--width-multiplier));
@@ -2791,6 +2791,9 @@
     font-size: calc(12 * var(--width-multiplier));
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    label {
+      cursor: pointer;
+    }
   }
   @media (max-width: 767px) {
     width: 100%;

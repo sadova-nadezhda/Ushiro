@@ -446,26 +446,26 @@ window.addEventListener("load", function () {
 
   // ====== Accordion ======
 
-  const AccItems = document.querySelectorAll(".accordion__item");
+  const accItems = document.querySelectorAll(".accordion__item");
 
-  AccItems.forEach((item) => {
-    item.addEventListener("click", function () {
-      AccItems.forEach((el) => {
-        if (el !== item) {
-          el.classList.remove("active");
-          const body = el.querySelector(".accordion__body");
-          if (body) body.style.maxHeight = null;
-        }
+  accItems.forEach((item) => {
+    const head = item.querySelector(".accordion__head");
+    const body = item.querySelector(".accordion__body");
+
+    if (!head || !body) return;
+
+    head.addEventListener("click", () => {
+      accItems.forEach((el) => {
+        if (el === item) return;
+
+        el.classList.remove("active");
+        const elBody = el.querySelector(".accordion__body");
+        if (elBody) elBody.style.maxHeight = null;
       });
 
-      this.classList.toggle("active");
-      const accBody = this.querySelector(".accordion__body");
+      const isOpen = item.classList.toggle("active");
 
-      if (this.classList.contains("active") && accBody) {
-        accBody.style.maxHeight = accBody.scrollHeight + "px";
-      } else if (accBody) {
-        accBody.style.maxHeight = null;
-      }
+      body.style.maxHeight = isOpen ? body.scrollHeight + "px" : null;
     });
   });
 
