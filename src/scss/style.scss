@@ -294,7 +294,7 @@
 .hero {
   &__slider {
     position: relative;
-    height: calc(100vh - calc(50 * var(--width-multiplier)));
+    height: calc(100dvh - calc(55 * var(--width-multiplier)));
     overflow: hidden;
     .swiper-slide {
       position: relative;
@@ -840,7 +840,7 @@
     position: sticky;
     top: calc(50 * var(--width-multiplier));
     left: 0;
-    height: calc(100vh - calc(50 * var(--width-multiplier)));
+    height: calc(100dvh - calc(55 * var(--width-multiplier)));
     overflow: hidden;
     img {
       width: 100%;
@@ -2537,7 +2537,7 @@
   left: 0;
   right: 0;
   display: none;
-  height: calc(100vh - calc(50 * var(--width-multiplier)));
+  height: calc(100dvh - calc(55 * var(--width-multiplier)));
   background-color: rgba($color: #000000, $alpha: 0.5);
   overflow-y: auto;
   overflow-x: hidden;
@@ -2659,7 +2659,7 @@
   right: 0;
   display: none;
   width: calc(400 * var(--width-multiplier));
-  height: calc(100vh - calc(50 * var(--width-multiplier)));
+  height: calc(100dvh - calc(55 * var(--width-multiplier)));
   background-color: var(--white);
   overflow-y: auto;
   overflow-x: hidden;
