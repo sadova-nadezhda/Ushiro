@@ -469,6 +469,26 @@ window.addEventListener("load", function () {
     });
   });
 
+  // Share
+
+  document.querySelectorAll('.share').forEach((share) => {
+    const toggleBtn = share.querySelector('.news-inner__share');
+    const nav = share.querySelector('nav');
+
+    const toggle = (e) => {
+      e.preventDefault();
+      share.classList.toggle('is-open');
+    };
+
+    if (toggleBtn) toggleBtn.addEventListener('click', toggle);
+
+    if (nav) nav.addEventListener('click', (e) => e.stopPropagation());
+
+    document.addEventListener('click', (e) => {
+      if (!share.contains(e.target)) share.classList.remove('is-open');
+    });
+  });
+
   // ====== Modals ======
 
   const modalWrapper = document.querySelector('.modals');
