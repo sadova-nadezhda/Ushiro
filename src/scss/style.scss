@@ -2541,6 +2541,25 @@
   background-color: rgba($color: #000000, $alpha: 0.5);
   overflow-y: auto;
   overflow-x: hidden;
+  &__close {
+    position: absolute;
+    top: calc(4 * var(--width-multiplier));
+    right: calc(4 * var(--width-multiplier));
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    svg {
+      display: block;
+      min-width: calc(24 * var(--width-multiplier));
+      width: calc(24 * var(--width-multiplier));
+      height: calc(24 * var(--width-multiplier));
+      pointer-events: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
   &__container {
     display: grid;
     grid-template-columns: 35% 1fr;
@@ -2552,6 +2571,7 @@
     background-color: var(--white);
     @media (max-width: 767px) {
       grid-template-columns: 1fr;
+      padding-top: calc(30 * var(--width-multiplier));
     }
   }
   &__left {

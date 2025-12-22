@@ -149,6 +149,22 @@ window.addEventListener("load", function () {
     addPadTop(header, sectionTop);
   }
 
+  (function () {
+    const btn = document.querySelector('[data-lang-swap]');
+    if (!btn) return;
+
+    const open = () => { btn.classList.add('is-open'); btn.setAttribute('aria-pressed', 'true'); };
+    const close = () => { btn.classList.remove('is-open'); btn.setAttribute('aria-pressed', 'false'); };
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      btn.classList.contains('is-open') ? close() : open();
+    });
+
+    document.addEventListener('click', () => close());
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  })();
+
   // ====== Preloader ======
 
   const innerBars = document.querySelectorAll(".inner-bar");
@@ -610,6 +626,7 @@ window.addEventListener("load", function () {
   const searchBtn = document.getElementById('search-btn');
   const search = document.getElementById('search');
   const searchInput = search.querySelector('.search-input');
+  const closeBtnSearch = document.querySelector('.search__close');
 
   let isSearchOpen = false;
 
@@ -675,6 +692,11 @@ window.addEventListener("load", function () {
     toggleSearch();
   });
 
+  closeBtnSearch.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeSearch();
+  });
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && isSearchOpen) {
       closeSearch();
@@ -686,9 +708,6 @@ window.addEventListener("load", function () {
   const filterBtn = document.getElementById('filter-btn');
   const filter = document.getElementById('filter');
   const closeBtnFilter = document.querySelector('.filter__close');
-  const clearFilterBtn = document.querySelector('.filter__clear');
-  const appliedList = document.querySelector('.filter__list');
-  const applyButton = document.querySelector('.filter__button');
 
   let isFilterOpen = false;
 

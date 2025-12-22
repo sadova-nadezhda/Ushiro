@@ -318,8 +318,8 @@ input[type="radio"] {
 
 input[type="radio"]::after {
   content: "";
-  width: calc(10 * var(--width-multiplier));
-  height: calc(10 * var(--width-multiplier));
+  width: calc(9 * var(--width-multiplier));
+  height: calc(9 * var(--width-multiplier));
   border-radius: 50%;
   background: var(--dark, $dark);
   transform: scale(0);

@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ваши заказы</title>
   <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.15/dist/lenis.css?_v=20251217185452">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20251217185452" />
-  <link rel="stylesheet" href="css/style.css?_v=20251217185452" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.15/dist/lenis.css?_v=20251222134835">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20251222134835" />
+  <link rel="stylesheet" href="css/style.css?_v=20251222134835" />
 </head>
 
   <body>
@@ -64,17 +64,41 @@
             <a href="" class="header__item">accessories</a>
           </li>
         </ul>
+        <div class="header__bottom tb">
+          <ul class="header__lang">
+            <li><a class="langSwap__link" href="/kk/">ҚАЗ</a></li>
+            <span class="langSwap__sep">/</span>
+            <a class="langSwap__link active" href="/">РУС</a>
+            <span class="langSwap__sep">/</span>
+            <li><a class="langSwap__link" href="/en/">ENG</a></li>
+          </ul>
+          <div class="header__group">
+            <div>2025. All rights reserved</div>
+            <div class="header__address">
+              Kazakhstan / Almaty
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.99935 12.8346C10.221 12.8346 12.8327 10.223 12.8327 7.0013C12.8327 3.77964 10.221 1.16797 6.99935 1.16797C3.77769 1.16797 1.16602 3.77964 1.16602 7.0013C1.16602 10.223 3.77769 12.8346 6.99935 12.8346Z" stroke="#7B7B7B" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.47401 4.52734L8.23734 8.23734L4.52734 9.47401L5.76401 5.76401L9.47401 4.52734Z" stroke="#7B7B7B" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
       </nav>
       <a href="/" class="header__logo">
         <img src="img/logo.svg" alt="Website logo" />
       </a>
       <div class="header__box">
-        <div class="header__lang">
-          <div class="header__lang-current">Eng</div>
-          <ul class="header__lang-list">
-            <li><a href="">Қаз</a></li>
-            <li><a href="">Рус</a></li>
-          </ul>
+        <div class="langSwap" data-lang-swap>
+          <button class="langSwap__btn" type="button" aria-expanded="false">
+            <span class="langSwap__current">ENG</span>
+            <span class="langSwap__chev" aria-hidden="true">›</span>
+          </button>
+
+          <div class="langSwap__links" aria-hidden="true">
+            <a class="langSwap__link" data-lang="kk" href="/kk/">ҚАЗ</a>
+            <span class="langSwap__sep">/</span>
+            <a class="langSwap__link" data-lang="ru" href="/ru/">РУС</a>
+          </div>
         </div>
         <div class="header__store">
           <div class="header__search header__icon" id="search-btn">
@@ -741,6 +765,11 @@
   </div>
 </div>
     <div class="search" id="search" data-lenis-prevent>
+  <button class="search__close">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.6 5.6L18.4 18.4M5.6 18.4L18.4 5.6" stroke="#090909" stroke-width="1.5"/>
+    </svg>
+  </button>
   <div class="search__container">
     <div class="search__left">
       <form action="" id="search-form" class="search__form">
@@ -921,9 +950,9 @@
   </div>
 </footer>
  
-    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js?_v=20251217185452"></script> 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20251217185452"></script>
-<script src="https://unpkg.com/gsap@3/dist/gsap.min.js?_v=20251217185452"></script>
-<script src="js/app.js?_v=20251217185452" defer></script>
+    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js?_v=20251222134835"></script> 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20251222134835"></script>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js?_v=20251222134835"></script>
+<script src="js/app.js?_v=20251222134835" defer></script>
   </body>
 </html>
