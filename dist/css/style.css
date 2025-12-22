@@ -700,13 +700,6 @@ h4 {
   pointer-events: none;
 }
 
-.header__item:hover + .submenu {
-  opacity: 1;
-  pointer-events: auto;
-  top: 100%;
-  left: 0;
-}
-
 .header__logo {
   min-width: calc(88 * var(--width-multiplier));
   width: calc(88 * var(--width-multiplier));
@@ -4484,5 +4477,14 @@ h4 {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .header__item:hover + .submenu {
+    opacity: 1;
+    pointer-events: auto;
+    top: 100%;
+    left: 0;
   }
 }

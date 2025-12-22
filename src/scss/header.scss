@@ -220,12 +220,14 @@
       height: calc(12 * var(--width-multiplier));
       pointer-events: none;
     }
-    &:hover {
-      + .submenu {
-        opacity: 1;
-        pointer-events: auto;
-        top: 100%;
-        left: 0;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        + .submenu {
+          opacity: 1;
+          pointer-events: auto;
+          top: 100%;
+          left: 0;
+        }
       }
     }
     @media(min-width: 1025px) {
