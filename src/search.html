@@ -54,14 +54,15 @@
           </div>
         </div>
       </div>
-      <section class="page-search section-pad section-hidden">
+      <section class="page-search section-pad-bottom section-hidden">
         <div class="container">
           <div class="page-search__container">
-            <div class="page-search__heading heading">
-              <div>
-                <div class="page-search__subtitle text-xs text-up text-space color-light">Результы по запросу</div>
-                <h1 class="page-search__title title text-up">SPRING SUMMER 2025</h1>
-              </div>
+            <div class="page-search__heading">
+              <div class="page-search__subtitle text-xs text-up text-space color-light">32 результата по запросу</div>
+              <h1 class="page-search__title title text-up">SPRING SUMMER 2025</h1>
+              <form action="" id="page-search-form" class="search__form">
+                <input type="search" placeholder="Поиск" class="search-input">
+              </form>
             </div>
             <div class="catalog__cards">
               <a class="catalog__card" href="">
@@ -233,6 +234,7 @@
     @@include('html/modals.html')
     @@include('html/search.html')
 
+    @@include('html/footer.html')
     @@include('html/foot.html')
   </body>
 </html>

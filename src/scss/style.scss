@@ -2333,6 +2333,32 @@
       width: 100%;
     }
   }
+  &-search {
+    padding-top: calc(50 * var(--width-multiplier));
+    @media (max-width: 767px) {
+      padding-top: calc(20 * var(--width-multiplier));
+    }
+    &__heading {
+      margin-bottom: calc(50 * var(--width-multiplier));
+      @media (max-width: 1024px) {
+        margin-bottom: calc(30 * var(--width-multiplier));
+      }
+      @media (max-width: 767px) {
+        margin-bottom: calc(16 * var(--width-multiplier));
+      }
+    }
+    .search__form {
+      width: 100%;
+      margin-top: calc(20 * var(--width-multiplier));
+      margin-bottom: 0;
+      @media (max-width: 1024px) {
+        margin-top: calc(10 * var(--width-multiplier));
+      }
+      @media (max-width: 767px) {
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 .thanks {
